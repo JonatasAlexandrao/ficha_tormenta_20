@@ -1,6 +1,7 @@
 <script>
   import TextBoxPersonagem from './elements/TextBoxPersonagem.svelte'
   import TextBoxDefault from './elements/TextBoxDefault.svelte'
+  import CharacterInfo from './CharacterInfo.svelte'
 
 </script>
 
@@ -12,6 +13,8 @@
     <TextBoxPersonagem />
     <TextBoxDefault text='Jogador' nameInput='player' />
   </div>
+
+  <CharacterInfo />
   
   
 </header>
