@@ -1,20 +1,28 @@
 /*==================== Global =========================*/
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0;}
+body { margin: 0; }
 h1, h2, h3, p { padding: 0; margin: 0; }
 label { display: block; }
 li { list-style: none; padding: 0; display: inline; }
 ul { padding: 0; margin: 0}
 button { border-style: none; cursor: pointer; }
 button:focus { border-color: #666; }
+input { border-style: none; }
 input, button, select, textarea { font-family: inherit; font-size: inherit; }
+
+/*=======================================*/
+
+@font-face {
+  font-family: 'Tormenta20';
+  src: url('./font/Tormenta.ttf');
+}
+/*font-family: Tormenta20, Arial, sans-serif;*/
 
 :root { font-size: 10px; }
 
 body {
-  /*width: 100vw;
-  height: 100vh;*/
+  font-family: Quattrocento Sans, sans-serif;
   background-color: rgb(54, 54, 54);
 
   display: flex;
