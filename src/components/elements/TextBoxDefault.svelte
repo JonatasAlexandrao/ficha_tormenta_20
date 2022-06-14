@@ -4,7 +4,7 @@
   export let type = 'text'
 </script>
 
-<div class="container_txt -default">
+<div class="container_txt -{nameInput}">
 
   <object class="side_edge -left" 
     data="../img/Caixas/lateral-padrao-E.svg" 
@@ -23,9 +23,13 @@
   
 </div>
 
-<style lang="scss">
 
-  .container_txt.-default {
+
+
+<style lang="scss">
+  
+
+  .container_txt {
     position: relative;
 
     display: flex;
@@ -34,8 +38,6 @@
 
     width: 95%;
     height: 3.2rem;
-    /*padding: .6vw .2vw;*/
-    margin: 0 .5rem;
 
     &::after {
       content: '';
@@ -80,10 +82,8 @@
       height: 80%;
 
       padding: .5rem;
-
       font-size: 2vw;
-      background-color: rgba(43, 86, 179, 0.1);
-      //background-color: transparent;
+ 
     }
     .txt_label {
       position: absolute;

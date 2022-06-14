@@ -40,18 +40,17 @@
       width: 90%;
       height: 3.2rem;
       font-size: 2.5vw;
-      background-color: rgba(43, 86, 179, 0.1);
     }
     .txt_label {
       position: absolute;
       
-      bottom: -.5rem;
+      bottom: -.1rem;
       left: 0;
       transform: translateY(100%);
 
-      margin-left: 1rem;
+      margin-left: 1.5rem;
 
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       //font-size: clamp(1rem, 2vw, 2rem);
       font-family: Tormenta20, sans-serif;
       text-transform: uppercase;      

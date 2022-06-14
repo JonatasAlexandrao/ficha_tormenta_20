@@ -1,7 +1,6 @@
 <script>
   import TextBoxPersonagem from './elements/TextBoxPersonagem.svelte'
   import TextBoxDefault from './elements/TextBoxDefault.svelte'
-  import CharacterInfo from './CharacterInfo.svelte'
 
 </script>
 
@@ -14,7 +13,13 @@
     <TextBoxDefault text='Jogador' nameInput='player' />
   </div>
 
-  <CharacterInfo />
+  <div class="character-info">
+    <TextBoxDefault text='Raça' nameInput='race' />
+    <TextBoxDefault text='Origem' nameInput='origin' />
+    <TextBoxDefault text='Classe & Nível' nameInput='class-level' />
+    <TextBoxDefault text='Divindade' nameInput='divinity' />
+    
+  </div>
   
   
 </header>
@@ -29,9 +34,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
 
-    
+    margin-bottom: 2rem;
+
 
     .container_logo {
       width: 100%;
@@ -40,6 +45,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      margin-bottom: 1rem;
 
       .logo {
         max-height: 100%;
@@ -54,6 +61,15 @@
       grid-template-columns: 60% 40%;
       justify-content: center;
       align-items: flex-end;
+      gap: 2%;
+      margin-bottom: 2.2rem;
+    }
+
+    .character-info {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 20% 22% 30% 20%;
       gap: 1%;
     }
 

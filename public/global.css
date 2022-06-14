@@ -29,3 +29,7 @@ body {
   justify-content: center;
 
 }
+
+input {
+  background-color: rgba(43, 86, 179, 0.1);
+}
