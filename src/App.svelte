@@ -3,6 +3,10 @@
   import Header from "./components/Header.svelte";
   import ImageAndPoints from "./components/ImageAndPoints.svelte";
   import Attributes from "./components/Attributes.svelte";
+  import AttackBox from "./components/AttackBox.svelte"
+  import OtherInfo from "./components/OtherInfo.svelte"
+  import Equipment from "./components/Equipment.svelte";
+  import Skills from "./components/Skills.svelte"
 
 </script>
 
@@ -14,8 +18,13 @@
     <section class="main-info">
       <ImageAndPoints />
       <Attributes />
+      <AttackBox />
+      <OtherInfo />
+      <Equipment />
     </section>
-    <section class="skills"></section>
+    <section class="skills">
+      <Skills />
+    </section>
   </div>
   
 </main>
@@ -26,7 +35,7 @@
 .ficha {
   min-width: 80rem;
   max-width: 80rem;
-  height: 100vh;
+  height: 100%;
 
   position: relative;
   padding: 2rem 3rem;

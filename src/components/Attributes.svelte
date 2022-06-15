@@ -15,9 +15,9 @@
 
   .container_attributes {
     width: 100%;
-
     display: flex;
-    //gap: 1rem;
+
+    margin-bottom: 1rem;
     
   }
 
