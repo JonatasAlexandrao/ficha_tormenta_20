@@ -13,7 +13,7 @@
     <TextBoxDefault text='Jogador' nameInput='player' />
   </div>
 
-  <div class="character-info">
+  <div class="container_character_info">
     <TextBoxDefault text='Raça' nameInput='race' />
     <TextBoxDefault text='Origem' nameInput='origin' />
     <TextBoxDefault text='Classe & Nível' nameInput='class-level' />
@@ -29,7 +29,6 @@
 
   .container_names {
     width: 100%;
-    //height: 6rem;
 
     display: flex;
     flex-direction: column;
@@ -46,7 +45,7 @@
       justify-content: center;
       align-items: center;
 
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
 
       .logo {
         max-height: 100%;
@@ -65,12 +64,11 @@
       margin-bottom: 2.2rem;
     }
 
-    .character-info {
+    .container_character_info {
       width: 100%;
-      display: grid;
-      justify-content: center;
-      grid-template-columns: 20% 22% 30% 20%;
-      gap: 1%;
+      display: flex;
+      padding: 0 1rem;
+      justify-content: space-between;
     }
 
     

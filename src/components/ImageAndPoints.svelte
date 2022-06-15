@@ -2,16 +2,16 @@
   import HealthMana from "./elements/HealthMana.svelte";
 </script>
 
-<div class="image-and-points">
+<div class="image_and_points">
   <div class="img"></div>
-  <HealthMana />
-  <HealthMana />
+  <HealthMana text="vida" subClass="health" />
+  <HealthMana text="mana" subClass="mana" />
 </div>
 
 
 <style lang="scss">
 
-  .image-and-points {
+  .image_and_points {
     display: grid;
     grid-template-areas: 
     'img points_health'
@@ -21,6 +21,13 @@
 
     .img {
       grid-area: img;
+
+      width: 85%;
+      height: 85%;
+      border: 4px solid #000;
+
+      justify-self: center;
+      align-self: center;
     }
   }
 

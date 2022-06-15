@@ -2,6 +2,7 @@
 	//export let name;
   import Header from "./components/Header.svelte";
   import ImageAndPoints from "./components/ImageAndPoints.svelte";
+  import Attributes from "./components/Attributes.svelte";
 
 </script>
 
@@ -12,6 +13,7 @@
   <div class="content">
     <section class="main-info">
       <ImageAndPoints />
+      <Attributes />
     </section>
     <section class="skills"></section>
   </div>
@@ -27,7 +29,7 @@
   height: 100vh;
 
   position: relative;
-  padding: 2rem;
+  padding: 2rem 3rem;
   
 }
 
@@ -50,7 +52,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 45%;
 
 }
 

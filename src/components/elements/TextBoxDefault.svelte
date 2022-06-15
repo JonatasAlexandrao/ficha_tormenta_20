@@ -39,6 +39,12 @@
     width: 95%;
     height: 3.2rem;
 
+    &.-race { width: 17%; }
+    &.-origin { width: 25%; }
+    &.-class-level { width: 33%; }
+    &.-divinity { width: 17%; }
+
+
     &::after {
       content: '';
       display: block;
@@ -91,7 +97,7 @@
       left: -3%;
       transform: translateY(100%);
 
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
       
       position: absolute;
@@ -101,7 +107,7 @@
       text-transform: uppercase;  
 
       &.-player {
-        bottom: 150%;
+        bottom: 145%;
       }
     }
 

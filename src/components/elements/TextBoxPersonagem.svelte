@@ -19,13 +19,13 @@
 
 <style lang="scss">
   .container_txt.-character {
+    width: 100%;
+    height: 100%;
+
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 100%;
-    height: 100%;
 
     .edge_character {
       position: absolute;
@@ -50,7 +50,7 @@
 
       margin-left: 1.5rem;
 
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       //font-size: clamp(1rem, 2vw, 2rem);
       font-family: Tormenta20, sans-serif;
       text-transform: uppercase;      
