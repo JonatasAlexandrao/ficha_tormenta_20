@@ -40,6 +40,7 @@
       width: 90%;
       height: 3.2rem;
       font-size: 2.5vw;
+      z-index: 1;
     }
     .txt_label {
       position: absolute;

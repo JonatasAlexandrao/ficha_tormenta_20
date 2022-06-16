@@ -39,6 +39,8 @@
     width: 95%;
     height: 3.2rem;
 
+    background-color: #00a1c6;
+
     &.-race { width: 17%; }
     &.-origin { width: 25%; }
     &.-class-level { width: 33%; }

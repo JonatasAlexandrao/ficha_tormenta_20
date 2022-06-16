@@ -1,4 +1,7 @@
-<script></script>
+<script>
+  const teste = document.querySelector(".defense_calc")
+  console.log(teste)
+</script>
 
 <div class="defense_calc">
 
@@ -45,7 +48,6 @@
       align-self: center;
       justify-self: center;
       //position: absolute;
-
       
     }
     .defense_modifiers {
