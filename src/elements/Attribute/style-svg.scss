@@ -1,0 +1,11 @@
+
+
+  :global(.container_attribute >.img_attribute) {
+    height: 100%;
+  }
+
+  :global(.img_attribute path)  {
+    fill:#00A1C6;
+    stroke:#000000;
+  }
+

@@ -1,12 +1,12 @@
 <script>
 	//export let name;
-  import Header from "./components/Header.svelte";
-  import ImageAndPoints from "./components/ImageAndPoints.svelte";
-  import Attributes from "./components/Attributes.svelte";
-  import AttackBox from "./components/AttackBox.svelte"
-  import OtherInfo from "./components/OtherInfo.svelte"
+  import Header from "./components/Header/Header.svelte"
+  import ImageAndPoints from "./components/ImageAndPoints/ImageAndPoints.svelte";
+  import Attributes from "./components/Attributes/Attributes.svelte";
+  import AttackBox from "./components/AttackBox/AttackBox.svelte"
+  import OtherInfo from "./components/OtherInfo/OtherInfo.svelte"
   import Equipment from "./components/Equipment.svelte";
-  import Skills from "./components/Skills.svelte"
+  import Skills from "./components/Skills/Skills.svelte"
 
 </script>
 
@@ -26,7 +26,7 @@
       <Skills />
     </section>
   </div>
-  
+
 </main>
 
 <style lang="scss">
@@ -39,7 +39,7 @@
 
   position: relative;
   padding: 2rem 3rem;
-  
+
 }
 
 .ficha::after {
@@ -65,5 +65,5 @@
 
 }
 
-	
+
 </style>

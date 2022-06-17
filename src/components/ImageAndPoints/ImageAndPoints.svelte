@@ -1,5 +1,5 @@
 <script>
-  import HealthMana from "../elements/HealthMana/HealthMana.svelte";
+  import HealthMana from "../../elements/HealthMana/HealthMana.svelte";
 </script>
 
 <div class="image_and_points">

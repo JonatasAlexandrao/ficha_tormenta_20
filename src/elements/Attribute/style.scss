@@ -1,0 +1,47 @@
+.container_attribute {
+
+  width: 7.5rem;
+  height: 7.5rem;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  .title {
+    width: 3rem;
+    position: absolute;
+    left: 50%;
+    top: .1rem;
+
+    font-family: Tormenta20, sans-serif;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  .label_attribute {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    font-size: 2.7rem;
+    opacity: .6;
+  }
+  .input_attribute {
+    width: 2.8rem;
+    height: 2rem;
+
+    position: absolute;
+    bottom: .65rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 2rem;
+
+    text-align: center;
+    font-size: 1.5rem;
+    
+  }
+
+}

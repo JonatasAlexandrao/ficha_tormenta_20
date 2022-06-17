@@ -1,0 +1,16 @@
+
+.container_txt.-character {
+  :global(.edge_character) {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+  }
+  :global(.edge_character > path)  {
+    fill:#00A1C6;
+    stroke:#000000;
+  }
+
+}
