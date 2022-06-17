@@ -2,11 +2,10 @@
   import { fetchSvg } from '../../functionSVG.js'
 </script>
 
-<div class="defense_calc">
-  <img src="../img/Defesa/Defesa.svg" alt="" use:fetchSvg>
+<div class="displacement_box">
+  <img src="../img/Defesa/deslocamento.svg" alt="" use:fetchSvg>
 </div>
 
 <style lang="scss">
-  @import "./style.scss";
   @import "./style-svg.scss";
 </style>

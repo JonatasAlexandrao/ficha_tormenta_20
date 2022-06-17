@@ -2,8 +2,8 @@
   import { fetchSvg } from '../../functionSVG.js'
 </script>
 
-<div class="defense_calc">
-  <img src="../img/Defesa/Defesa.svg" alt="" use:fetchSvg>
+<div class="size_box">
+  <img src="../img/Defesa/tamanho.svg" alt="" use:fetchSvg>
 </div>
 
 <style lang="scss">

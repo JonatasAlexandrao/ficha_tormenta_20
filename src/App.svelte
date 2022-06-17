@@ -5,7 +5,7 @@
   import Attributes from "./components/Attributes/Attributes.svelte";
   import AttackBox from "./components/AttackBox/AttackBox.svelte"
   import OtherInfo from "./components/OtherInfo/OtherInfo.svelte"
-  import Equipment from "./components/Equipment.svelte";
+  import Equipment from "./components/Equipment/Equipment.svelte";
   import Skills from "./components/Skills/Skills.svelte"
 
 </script>

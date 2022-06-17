@@ -2,8 +2,8 @@
   import { fetchSvg } from '../../functionSVG.js'
 </script>
 
-<div class="defense_calc">
-  <img src="../img/Defesa/Defesa.svg" alt="" use:fetchSvg>
+<div class="proficiency">
+  <img src="../img/Defesa/Proficiencias.svg" alt="" use:fetchSvg>
 </div>
 
 <style lang="scss">

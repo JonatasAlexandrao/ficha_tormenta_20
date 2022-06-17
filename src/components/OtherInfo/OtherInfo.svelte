@@ -1,12 +1,23 @@
 <script>
   import DefenseCalc from "../../elements/DefenseCalc/DefenseCalc.svelte"
+  import ArmorAndShield from '../../elements/ArmorAndShield/ArmorAndShield.svelte'
+  import ExperienceBox from "../../elements/ExperienceBox/ExperienceBox.svelte";
+  import Proficiency from "../../elements/Proficiency/Proficiency.svelte"
+  import SizeBox from "../../elements/SizeBox/SizeBox.svelte"
+  import DisplacementBox from "../../elements/DisplacementBox/DisplacementBox.svelte"
 </script>
 
 <div class="container_other_info">
   <div class="container_defense_other">
     <DefenseCalc />
+    <ArmorAndShield />
+    <ExperienceBox />
   </div>
-  <div class="container_proficiencies_other"></div>
+  <div class="container_proficiencies_other">
+    <Proficiency />
+    <SizeBox />
+    <DisplacementBox />
+  </div>
 
 </div>
 
