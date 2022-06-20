@@ -24,15 +24,5 @@
     font-size: 1.2rem;
     
     z-index: 1;
-
-    .txt_label {
-      text-align: center;
-    }
-    .txt_input {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      font-size: 1.8rem;
-    }
   }
 </style>

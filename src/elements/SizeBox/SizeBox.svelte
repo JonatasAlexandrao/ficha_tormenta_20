@@ -4,7 +4,7 @@
 
 <div class="size_box">
   <label class="txt_label -size" for="size">Tamanho</label>
-  <input class="txt_input" id="size" type="text" >
+  <input class="txt_input -size_box" id="size" type="text" >
   <span class="text_modifiers">+5/-5</span>
   <img src="../img/Defesa/tamanho.svg" alt="" use:fetchSvg>
 </div>
@@ -27,10 +27,8 @@
     .txt_label {
       text-align: center;
     }
-    .txt_input {
-      width: 100%;
+    .txt_input.-size_box {
       height: 75%;
-      //text-align: center;
       font-size: 1.4rem;
     }
     .text_modifiers {

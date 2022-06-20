@@ -17,5 +17,16 @@ $color-stroke: #000000;
 }
 
 
+// ====== Global ======
+:global(.txt_label) {
+  text-align: center;
+}
+:global(.txt_input) {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
 
 

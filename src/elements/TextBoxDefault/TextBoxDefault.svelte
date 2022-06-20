@@ -10,8 +10,8 @@
   <img src="../img/Caixas/lateral-padrao-D.svg" alt="" use:fetchSvg>
 
 
-  <input class="txt_input" id="{nameInput}" type="{type}" >
-  <label class="txt_label -{nameInput}" for="{nameInput}">{text}</label>
+  <input class="txt_input -default" id="{nameInput}" type="{type}" >
+  <label class="txt_label -default -{nameInput}" for="{nameInput}">{text}</label>
   
 </div>
 

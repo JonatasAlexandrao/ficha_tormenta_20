@@ -38,7 +38,7 @@
     background-color: #000;
   }
 
-  .txt_input {
+  .txt_input.-default {
     width: 95%;
     height: 80%;
 
@@ -46,7 +46,7 @@
     font-size: 2vw;
 
   }
-  .txt_label {
+  .txt_label.-default {
     position: absolute;
     bottom: -.1rem;
     left: -3%;

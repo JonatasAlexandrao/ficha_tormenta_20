@@ -4,8 +4,8 @@
 
 <div class="container_txt -character">
 
-  <input class="txt_input" id="character" type="text" >
-  <label class="txt_label" for="character">Personagem</label>
+  <input class="txt_input -character" id="character" type="text" >
+  <label class="txt_label -character" for="character">Personagem</label>
 
   <img src="../img/Caixas/Personagem.svg" alt="" use:fetchSvg>
   
