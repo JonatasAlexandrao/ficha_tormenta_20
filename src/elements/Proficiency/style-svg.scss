@@ -1,6 +1,11 @@
 @import "../../global.scss";
 
-:global(.img_proficiency path){
+:global(.proficiency > svg){
+  @include svg-default;
+  bottom: .5rem;
+}
+
+:global(.proficiency > svg path){
   fill: $color-fill;
   stroke:$color-stroke;
 }

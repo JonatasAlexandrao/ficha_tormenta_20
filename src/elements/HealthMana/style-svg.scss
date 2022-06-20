@@ -1,12 +1,12 @@
 
 @import "../../global.scss";
   
-:global(.container_health_mana .points_box) {
+:global(.container_health_mana > svg) {
   width: 100%;
   height: 100%;
 }
 
-:global(.points_box path, .points_box polygon)  {
+:global(.container_health_mana > svg path, .container_health_mana > svg polygon)  {
   fill: $color-fill;
   stroke:$color-stroke;
 }

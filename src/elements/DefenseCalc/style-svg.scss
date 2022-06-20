@@ -1,7 +1,9 @@
 
 @import "../../global.scss";
 
-:global(.img-defense path){
+:global(.defense_calc > svg){ @include svg-default; }
+
+:global(.defense_calc > svg path){
   fill: $color-fill;
   stroke:$color-stroke;
 }

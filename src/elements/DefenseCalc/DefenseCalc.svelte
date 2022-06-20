@@ -3,7 +3,7 @@
 </script>
 
 <div class="defense_calc">
-  <img src="../img/Defesa/Defesa.svg" alt="" use:fetchSvg>
+  <img src="../img/Defesa/defense_calc.svg" alt="" use:fetchSvg>
 </div>
 
 <style lang="scss">

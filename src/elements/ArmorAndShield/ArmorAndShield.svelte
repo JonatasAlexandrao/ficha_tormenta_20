@@ -3,7 +3,7 @@
 </script>
 
 <div class="armor_and_shield">
-  <img src="../img/Defesa/Armadura.svg" alt="" use:fetchSvg>
+  <img src="../img/Defesa/armor_and_shield.svg" alt="" use:fetchSvg>
 </div>
 
 <style lang="scss">

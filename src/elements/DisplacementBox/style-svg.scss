@@ -1,6 +1,9 @@
 @import "../../global.scss";
 
-:global(.img_displacement_box polygon){
+
+:global(.displacement_box > svg){ @include svg-default; }
+
+:global(.displacement_box > svg polygon){
   fill: $color-fill;
   stroke:$color-stroke;
 }

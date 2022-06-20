@@ -1,7 +1,9 @@
 
 @import "../../global.scss";
 
-:global(.img_armor_and_shield path){
+:global(.armor_and_shield > svg){ @include svg-default }
+
+:global(.armor_and_shield > svg path){
   fill: $color-fill;
   stroke:$color-stroke;
 }

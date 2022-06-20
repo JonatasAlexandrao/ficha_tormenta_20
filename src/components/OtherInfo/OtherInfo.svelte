@@ -26,24 +26,28 @@
 
   .container_other_info {
     width: 100%;
-
     margin-bottom: 1rem;
 
-    height: 250px;
-    background-color: rgba(42, 134, 165, 0.5);
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 58% 40%;
+    grid-template-rows: 19rem;
+    gap: 2%;
 
     .container_defense_other {
       width: 100%;
       height: 100%;
-      background-color: cadetblue;
-     
+
+      display: grid;
+      grid-template-rows: 8rem 7rem 3.2rem;
+      align-content: space-between;  
     }
     .container_proficiencies_other {
       width: 100%;
       height: 100%;
-      background-color: rgb(95, 160, 101);
+
+      display: grid;
+      grid-template-rows: 10rem 4.2rem 3.2rem;
+      align-content: space-between;
     }
   }
 

@@ -1,17 +1,16 @@
 @import "../../global.scss";
 
-.container_txt.-character {
-  :global(.edge_character) {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    pointer-events: none;
-  }
-  :global(.edge_character > path)  {
-    fill: $color-fill;
-    stroke:$color-stroke;
-  }
 
+:global(.container_txt.-character > svg) {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
 }
+:global(.container_txt.-character > svg > path) {
+  fill: $color-fill;
+  stroke:$color-stroke;
+}
+
