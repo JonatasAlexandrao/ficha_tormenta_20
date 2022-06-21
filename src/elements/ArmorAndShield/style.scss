@@ -22,9 +22,14 @@
     grid-template-rows: 20% 38% 38%;
     gap: 4%;
 
-    .title.-name {
-      font-size: 1rem;
+    .title {
+      align-self: flex-end;
+      &.-name {
+        font-size: 1rem;
+      }
     }
+
+    
     .txt_input.-armor_and_shield {
       font-size: 1.4rem;
       border-bottom: #000 2px solid;

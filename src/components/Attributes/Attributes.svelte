@@ -16,8 +16,6 @@
   .container_attributes {
     width: 100%;
     display: flex;
-
-    margin-bottom: 1rem;
     
   }
 
