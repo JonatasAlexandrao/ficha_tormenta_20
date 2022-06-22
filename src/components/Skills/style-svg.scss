@@ -1,0 +1,31 @@
+
+@import "../../global.scss";
+
+:global(.container_skills > svg) {
+  position: absolute;
+  width: 101.6%;
+  top: 0;
+  left:50%;
+  z-index: -1;
+
+  transform: translateY(-90%) translateX(-50%);
+
+}
+
+:global(.container_skills > svg:last-child) {
+  //position: absolute;
+  width: 101.6%;
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+
+  transform: translateY(80%) translateX(-50%);
+
+}
+
+:global(.container_skills path)  {
+  fill:$color-fill;
+  stroke:$color-stroke;
+}
+
