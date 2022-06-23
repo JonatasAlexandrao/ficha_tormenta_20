@@ -23,13 +23,15 @@
 
 
 <style lang="scss">
+
   .skill_line {
-    height: 2.5rem;
+    height: 3rem;
     font-size: 1.3rem;
 
     td:first-child {
       display: flex;
       align-items: center;
+      //border:none;
 
       & > input {
         margin: 0 1rem 0 0;
@@ -40,11 +42,11 @@
     td {
       height: 100%;
       text-align: center;
-      //border-bottom: #000 1px solid;
+      border-bottom: rgba(0, 0, 0, .2) 1px solid;
 
       .text_outher {
         width: 100%;
-        height: 100%;
+        height: 90%;
         text-align: inherit;
       }
     }

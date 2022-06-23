@@ -33,26 +33,27 @@
   }
 
   .table_skills {
-    width: 100%;
+    width: 96%;
     position: relative;
 
-    margin-top: -5.5rem;
-    padding: 0 .5rem;
+    margin: -4.5rem 2% 2rem 2%;
+    border-collapse: collapse;
 
     z-index: 1;
 
     tr { height: 3rem; }
     th { 
-      max-width: 4rem; 
-      min-width: 4rem;
-      font-size: 1rem;
+      max-width: 12%; 
+      min-width: 12%;
+      font-size: 1.1rem;
       vertical-align: bottom;
     }
 
     th:first-child {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
-      width: 40%;
+      width: 35%;
+      min-width: 30%;
     }
 
   }
@@ -61,12 +62,12 @@
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 1rem;
+    gap: 2rem;
 
     position: absolute;
-    bottom: -1%;
+    bottom: 0%;
 
-    font-size: .8rem;
+    font-size: 1rem;
     z-index: 2;
 
     p {

@@ -27,6 +27,10 @@
     </section>
   </div>
 
+  <footer>
+
+  </footer>
+
 </main>
 
 <style lang="scss">
@@ -70,6 +74,11 @@
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 5rem;
 }
 
 
