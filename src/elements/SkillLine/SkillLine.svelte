@@ -28,6 +28,10 @@
     height: 3rem;
     font-size: 1.3rem;
 
+    .check_box {
+      opacity: .8;
+    }
+
     td:first-child {
       display: flex;
       align-items: center;

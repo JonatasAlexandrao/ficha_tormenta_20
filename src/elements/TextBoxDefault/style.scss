@@ -17,6 +17,19 @@
   &.-class-level { width: 33%; }
   &.-divinity { width: 17%; }
 
+  &.-class-level {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    #class-level {
+      width: 97%;
+    }
+    .txt_input.-level {
+      width: 100%;
+      height: 80%;
+      padding: .5rem;
+      font-size: 2vw;
+    }
+  }
 
   &::after {
     content: '';

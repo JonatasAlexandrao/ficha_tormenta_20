@@ -9,9 +9,14 @@
   <img src="../img/Caixas/lateral-padrao-E.svg" alt="" use:fetchSvg>
   <img src="../img/Caixas/lateral-padrao-D.svg" alt="" use:fetchSvg>
 
-
-  <input class="txt_input -default" id="{nameInput}" type="{type}" >
   <label class="txt_label -default -{nameInput}" for="{nameInput}">{text}</label>
+  <input class="txt_input -default" id="{nameInput}" type="{type}" >
+
+  {#if nameInput === "class-level"}
+    <input class="txt_input -level" id="level" type="text" >
+  {/if}
+  
+  
   
 </div>
 
