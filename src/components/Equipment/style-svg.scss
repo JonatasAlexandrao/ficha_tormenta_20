@@ -1,0 +1,58 @@
+@import "../../global.scss";
+
+:global(.container_equipment .equipment_top){ 
+  position: absolute;
+  width: 100.9%;
+  left: 50%;
+  top: 1%;
+  transform: translateY(-100%) translateX(-50%);
+
+  z-index: -2;
+}
+
+:global(.equipment_top::after) {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: $color-fill;
+  border-left: $color-stroke 2px solid;
+  border-right: $color-stroke 2px solid;
+  transform: translateX(-50%);
+
+}
+
+:global(.container_equipment .equipment_bottom){ 
+  position: absolute;
+  width: 100.9%;
+  left: 50%;
+  bottom: -12%;
+  transform: translateY(-100%) translateX(-50%);
+
+  z-index: -2;
+}
+
+
+:global(.equipment_bottom::before) {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: $color-stroke 2px solid;
+  border-right: $color-stroke 2px solid;
+  background-color: $color-fill;
+}
+
+
+
+:global(.container_equipment svg polygon){
+  fill: $color-fill;
+  stroke:$color-stroke;
+}

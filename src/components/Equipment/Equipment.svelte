@@ -1,18 +1,21 @@
 <script>
+  import { fetchSvg } from '../../functionSVG.js'
+
   import EquipmentLine from "../../elements/EquipmentLine/EquipmentLine.svelte";
 
  
 </script>
 
-<div class="containerEquipment">
-  <div class="title"></div>
+<div class="container_equipment">
+  
+  <span class="title">Equipamento</span>
 
   <div class="header_equipment">
     <span>Item</span>
     <span>Peso</span>
   </div>
 
-  <div class="contentEquipament">
+  <div class="content_equipment">
     <EquipmentLine num=1 />
     <EquipmentLine num=2 />
     <EquipmentLine num=3 />
@@ -55,27 +58,44 @@
     </div>
 
   </div>
+
+  <div class="equipment_top">
+    <img src="../img/Equipamento/equipment-top.svg" alt="" use:fetchSvg>
+  </div>
+  <div class="equipment_bottom">
+    <img src="../img/Equipamento/equipment-bottom.svg" alt="" use:fetchSvg>
+  </div> 
+
 </div>
 
 <style lang="scss">
+  @import "./style-svg.scss";
+
   @import "../../global.scss";
 
-  .containerEquipment {
+  .container_equipment {
     position: relative;
-    width: 100%;
+    width: 99%;
     
-    padding: 1rem;
+    margin-top: 3rem;
+    padding: 0 1rem ;
     background-color: $color-fill;
-    border: 2px #000 solid;
+    border: 2px $color-stroke solid;
 
-    .contentEquipament {
-      width: 100%;
-      height: 25.7rem;
-      overflow: hidden;
-      overflow-y: auto;
-     
-    }
     
+
+    z-index: 1;
+
+    .title {
+      position: absolute;
+      top: -2rem;
+      left: 50.5%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-family: Tormenta20, Arial, sans-serif;
+    }
+
     .header_equipment {
       width: 100%;
       
@@ -83,6 +103,14 @@
       grid-template-columns: 80% 17%;
 
       font-size: 1.2rem;
+    }
+
+    .content_equipment {
+      width: 100%;
+      height: 25.7rem;
+      overflow: hidden;
+      overflow-y: auto;
+     
     }
 
     .container_totals {
