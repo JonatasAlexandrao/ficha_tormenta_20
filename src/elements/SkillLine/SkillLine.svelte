@@ -1,5 +1,6 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import ComboBox from '../../elements/ComboBox/ComboBox.svelte' 
 
   export let text = ''
   export let attribut = 'For'
@@ -20,7 +21,9 @@
      <img src="../img/Pericias/skills_total.svg" alt="" use:fetchSvg>
   </td>
   <td class="skill_line_half_level"> 4 </td>
-  <td class="skill_line_modifier"> {attribut} </td>
+  <td class="skill_line_modifier"> 
+    <ComboBox className="skill_modifier" idName="skill_modifier" />
+  </td>
   <td class="skill_line_training"> 2 </td>
   <td class="skill_line_others"> <input class="text_outher -{className}" id="text_outher_{num}" type="text" value="0"></td>
 </tr>
@@ -70,6 +73,34 @@
       }
     }
 
+    
+
+    .skill_line_modifier {
+      position: relative;
+      &::after {
+        content: '+';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+        font-size: 1.8rem;
+      }
+      &::before {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(100%);
+        font-size: 1.8rem;
+      }
+
+    }
+
+    :global(.skill_line_modifier .container_combo_box input) {
+      width: 80%;
+      justify-self: center;
+    }
+
     .skill_line_others {
       position: relative;
 
@@ -87,18 +118,7 @@
       }
     }
 
-    .skill_line_modifier, .skill_line_training {
-      position: relative;
-      &::after {
-        content: '+';
-        position: absolute;
-        left: -.2rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.8rem;
-      }
-    }
-
+    
 
 
     

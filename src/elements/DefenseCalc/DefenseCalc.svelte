@@ -1,5 +1,6 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
 </script>
 
 <div class="defense_calc">
@@ -18,7 +19,7 @@
       <div class="container -modifier">
         <div class="container_title">
           <span class="modifier_title">Mod. de</span>
-          <input class="attribute_modifier" id="experience" type="text"> 
+          <ComboBox className="size" idName="size" />
         </div>
         <span class="value -modifier">5</span>
       </div>

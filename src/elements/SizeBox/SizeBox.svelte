@@ -1,10 +1,14 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
+
+  let list = ['Minúsculo', 'Pequeno', 'Médio', 'Grande', 'Enorme', 'Colossal']
 </script>
 
 <div class="size_box">
   <label class="txt_label -size" for="size">Tamanho</label>
-  <input class="txt_input -size_box" id="size" type="text" >
+  <ComboBox className="size" idName="size" list="{list}" />
+
   <span class="text_modifiers">+5/-5</span>
   <img src="../img/Defesa/tamanho.svg" alt="" use:fetchSvg>
 </div>
@@ -22,14 +26,10 @@
     grid-template-columns: 30% 35% 35%;
 
     padding: .4rem;    
-    z-index: 1;
+    z-index: 2;
     
     .txt_label {
       text-align: center;
-    }
-    .txt_input.-size_box {
-      height: 75%;
-      font-size: 1.4rem;
     }
     .text_modifiers {
       width: 90%;
