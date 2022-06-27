@@ -2,17 +2,39 @@
   export let className = ''
   export let idName = ''
   export let list = ['For','Des','Con', 'Int', 'Sab', 'Car']
+
+  function clickComboBox() {
+
+    const className = '.' + this.parentNode.className.replace(' ', ' .')
+    const listBox = document.querySelector(className + ' > ul')
+
+
+    //this.classList.add('-active')
+    console.log(className)
+    console.log(listBox)
+    //console.log(`.${this.parentNode.className}`)
+  }
+
 </script>
 
 <div class="container_combo_box">
-  <input class="combo_box -{className}" id="{idName}" type="text">
+  <input class="combo_box -{className}" id="{idName}" type="text" on:click="{clickComboBox}">
 
   <ul>
     {#each list as item}
-      <li>{item}</li>
+      <li >{item}</li>
     {/each}
   </ul>
 </div>
+
+<!-- <div class="container_combo_box">
+  <select class="combo_box -{className}" id="{idName}" type="text" value="{selected}">
+
+  {#each list as item}
+    <option >{item}</option>
+  {/each}
+
+</div> -->
 
 
 
@@ -34,6 +56,7 @@
       height: 75%;
       font-size: 1.4rem;
       cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
     ul {
@@ -42,14 +65,18 @@
       left: 50%;
       transform: translateX(-50%);
 
-      display: flex;
-      //display: none;
+      
+      display: none;
       flex-direction: column;
       margin-top: .5rem;
 
       background-color: $color-fill-dark;
       border: 2px solid $color-stroke;
       z-index: 3;
+
+      &.-active {
+        display: flex;
+      }
 
       &::before {
         content: '';
@@ -98,7 +125,6 @@
 
     
   }
-
 
 
 </style>
