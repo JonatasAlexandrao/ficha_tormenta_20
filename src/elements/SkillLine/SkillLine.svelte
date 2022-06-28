@@ -22,7 +22,7 @@
   </td>
   <td class="skill_line_half_level"> 4 </td>
   <td class="skill_line_modifier"> 
-    <ComboBox className="skill_modifier" idName="skill_modifier" />
+    <ComboBox className="skill_modifier" idName="skill_modifier" textDefault={attribut} />
   </td>
   <td class="skill_line_training"> 2 </td>
   <td class="skill_line_others"> <input class="text_outher -{className}" id="text_outher_{num}" type="text" value="0"></td>

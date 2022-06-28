@@ -7,7 +7,7 @@
 
 <div class="size_box">
   <label class="txt_label -size" for="size">Tamanho</label>
-  <ComboBox className="size" idName="size" list="{list}" />
+  <ComboBox className="size" idName="size" list={list} />
 
   <span class="text_modifiers">+5/-5</span>
   <img src="../img/Defesa/tamanho.svg" alt="" use:fetchSvg>

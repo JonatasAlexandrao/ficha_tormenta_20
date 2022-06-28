@@ -19,7 +19,7 @@
       <div class="container -modifier">
         <div class="container_title">
           <span class="modifier_title">Mod. de</span>
-          <ComboBox className="size" idName="size" />
+          <ComboBox className="modifier" idName="modifier" textDefault="Des" />
         </div>
         <span class="value -modifier">5</span>
       </div>
