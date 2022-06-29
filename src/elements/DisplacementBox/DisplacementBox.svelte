@@ -23,6 +23,6 @@
     padding: .4rem;
     font-size: 1.2rem;
     
-    z-index: 1;
+    z-index: 0;
   }
 </style>

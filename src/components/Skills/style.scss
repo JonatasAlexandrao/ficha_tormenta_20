@@ -19,7 +19,6 @@
     position: relative;
     display: block;
     background-color: $color-fill;
-    z-index: 0;
   }
 
   &::after {
@@ -29,7 +28,6 @@
     position: relative;
     display: block;
     background-color: $color-fill;
-    z-index: 0;
   }
 
   .table_skills {
@@ -38,8 +36,6 @@
 
     margin: -4.5rem 2% 2rem 2%;
     border-collapse: collapse;
-
-    z-index: 2;
 
     tr { height: 3rem; }
     th { 

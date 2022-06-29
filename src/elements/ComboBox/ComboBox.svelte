@@ -5,23 +5,40 @@
   export let textDefault = ''
 
   function clickComboBox() {
+    const container = this.parentElement
     const listBox = this.nextElementSibling
-    //const bottomToClose = this.parentElement.previousElementSibling
+    const bottomToClose = container.previousElementSibling
+
+    container.classList.toggle('-active')
     listBox.classList.toggle('-active')
-    //bottomToClose.classList.toggle('-active')
+    bottomToClose.classList.toggle('-active')
+    
   
   }
 
   function selected() {
     const text = this.textContent
     const listBox = this.parentElement
+    const container = listBox.parentElement
     const input = listBox.parentElement.firstChild
+    const bottomToClose = listBox.parentElement.previousElementSibling
 
     listBox.classList.remove('-active')
+    container.classList.remove('-active')
+    bottomToClose.classList.remove('-active')
     input.value = text
   }
 
+  function closedComboBox() {
+    const listBox = this.nextElementSibling.lastChild
+    const container = listBox.parentElement
+    listBox.classList.remove('-active')
+    container.classList.remove('-active')
+    this.classList.remove('-active')
+  }
+
 </script>
+<div class="bottom_to_close" on:click={closedComboBox}></div>
 <div class="container_combo_box">
   <input class="combo_box -{className}" id={idName} type="text" value={textDefault} on:click={clickComboBox} readonly>
 
@@ -36,4 +53,21 @@
 
 <style lang="scss">
   @import "./style.scss";
+
+  .container_combo_box.-active {
+    z-index: 9999;
+  }
+
+  .bottom_to_close {
+    position: fixed;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    inset: 0;
+    z-index: 9998;
+
+    &.-active {
+      display: block;
+    }
+  }
 </style>
