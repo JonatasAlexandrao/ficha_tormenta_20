@@ -7,9 +7,9 @@ $color-fill-dark: #0c957c;
 $color-stroke: #000000;
 
 
-// ====== Mixins ======
+// ====== Placeholder ======
 
-@mixin svg-default {
+%svg-default {
   position: absolute;
   width: 100%;
   height: 100%;

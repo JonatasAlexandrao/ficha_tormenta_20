@@ -1,7 +1,7 @@
 
 @import "../../global.scss";
 
-:global(.defense_calc > svg){ @include svg-default; }
+:global(.defense_calc > svg){ @extend %svg-default; }
 
 :global(.defense_calc > svg path){
   fill: $color-fill;

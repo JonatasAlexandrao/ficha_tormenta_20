@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 :global(.size_box > svg){
-  @include svg-default;
+  @extend %svg-default;
 }
 
 :global(.size_box > svg polygon){

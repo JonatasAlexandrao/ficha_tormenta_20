@@ -15,7 +15,7 @@
 
   <div class="container_character_info">
     <TextBoxDefault text='Raça' nameInput='race' />
-    <TextBoxDefault text='Origem' nameInput='origin' />
+    <TextBoxDefault text='Origem' nameInput='origin' caracterLength='12' />
     <TextBoxDefault text='Classe & Nível' nameInput='class-level' />
     <TextBoxDefault text='Divindade' nameInput='divinity' />
     
