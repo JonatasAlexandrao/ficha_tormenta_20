@@ -1,13 +1,18 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
   export let text = ''
   export let subClass = ''
 </script>
 
 <div class="container_health_mana -{subClass}">
 
-  <input class="input_max_points" type="text">
-  <input class="input_historic" type="text">
+  <div class="container_max_points">
+    <InputDefault className='max_points' nameInput='points_{subClass}' maxlength='3' caracterLength='2' />
+  </div>
+  <div class="container_historic">
+    <InputDefault className='historic' nameInput='_historic_{subClass}' caracterLength='13' />
+  </div>
 
   <span class="title">Pontos de {text}</span>
   <span class="text_box1">Máximos</span>

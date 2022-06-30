@@ -10,14 +10,14 @@
   </div>
   <div class="container_character">
     <TextBoxCharacter />
-    <TextBoxDefault text='Jogador' nameInput='player' />
+    <TextBoxDefault text='Jogador' nameInput='player' caracterLength='19' />
   </div>
 
   <div class="container_character_info">
-    <TextBoxDefault text='Raça' nameInput='race' />
-    <TextBoxDefault text='Origem' nameInput='origin' caracterLength='12' />
-    <TextBoxDefault text='Classe & Nível' nameInput='class-level' />
-    <TextBoxDefault text='Divindade' nameInput='divinity' />
+    <TextBoxDefault text='Raça' nameInput='race' caracterLength='10' />
+    <TextBoxDefault text='Origem' nameInput='origin' caracterLength='15' />
+    <TextBoxDefault text='Classe & Nível' nameInput='class-level' caracterLength='16' />
+    <TextBoxDefault text='Divindade' nameInput='divinity' caracterLength='10' />
     
   </div>
   
