@@ -19,7 +19,7 @@
   display: grid;
   align-items: center;
 
-  &-active { z-index: 9999; }
+  &.-active { z-index: 9999; }
 
   .combo_box {
     width: 100%;
