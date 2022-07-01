@@ -1,10 +1,12 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 </script>
 
 <div class="displacement_box">
   <label class="txt_label -displacement" for="displacement">Deslocamento</label>
-  <input class="txt_input" id="displacement" type="text" > 
+  <InputDefault className="displacement" nameInput="displacement" caracterLength="5" />
+  <!-- <input class="txt_input" id="displacement" type="text" >  -->
   <img src="../img/Defesa/deslocamento.svg" alt="" use:fetchSvg>
 </div>
 

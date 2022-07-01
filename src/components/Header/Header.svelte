@@ -53,7 +53,6 @@
     }
 
     .container_character {
-     
       width: 80%;
       height: 4.5rem;
       display: grid;
@@ -61,7 +60,7 @@
       justify-content: center;
       align-items: flex-end;
       gap: 2%;
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.5rem;
     }
 
     .container_character_info {

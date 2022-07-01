@@ -1,10 +1,11 @@
 <script>
+  import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
   export let num = ''
 </script>
 
 <div class="equipment_line">
-  <input class="txt_description" id="txt_description_{num}" type="text">
-  <input class="txt_weight" id="txt_weight_{num}" type="text" value="0">
+  <InputDefault className="description" nameInput="description_{num}" caracterLength="38" />
+  <InputDefault className="weight" nameInput="weight_{num}" caracterLength="2" />
 </div>
 
 
@@ -17,17 +18,7 @@
     display: grid;
     grid-template-columns: 80% 17%;
     gap: 3%;
-    margin-bottom: .5rem;
-
-    input {
-      width: 100%;
-      font-size: 1.4rem;
-      border-bottom: 2px solid #000;
-    }
-    .txt_weight {
-      text-align: center;
-    }
-    
+    margin-bottom: .5rem;    
   }
 
 </style>

@@ -8,9 +8,11 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   pointer-events: none;
+  z-index: -1;
 }
 :global(.container_txt.-character > svg > path) {
   fill: $color-fill;
   stroke:$color-stroke;
+  stroke-width: .1rem;
 }
 

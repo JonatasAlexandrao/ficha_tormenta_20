@@ -17,8 +17,6 @@
 
     display: grid;
     align-items: center;
-    //grid-template-rows: 20% 80%;
-
     padding: .2rem .7rem 1rem;
     font-size: 1.2rem;
     
@@ -27,9 +25,12 @@
     .txt_textarea {
       width: 100%;
       height: 100%;
-      font-size: 1.8rem;
+      padding: .5rem;
+
       resize: none;
-      font-size: 1.2rem;    
+      font-size: 1.2rem;
+
+      background-color: $color-input; 
     }
   }
 

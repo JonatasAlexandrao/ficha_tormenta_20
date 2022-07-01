@@ -1,6 +1,7 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
+  import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 </script>
 
 <div class="defense_calc">
@@ -36,7 +37,11 @@
 
       <div class="container -others">
         <span class="others_title">Outros</span>
-        <input class="value -others" id="defense_calc_others" type="text" value="0"> 
+        <div class="container_input_other">
+          <InputDefault className="others" nameInput="defense_calc_others" />
+        </div>
+
+        <!-- <input class="value -others" id="defense_calc_others" type="text" value="0">  -->
       </div>
 
     </div>

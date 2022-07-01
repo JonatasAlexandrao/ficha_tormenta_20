@@ -1,0 +1,111 @@
+@import "../../global.scss";
+
+%calcFontDefault {
+  &.s-1 { font-size: 1.8rem; }
+  &.s-2 { font-size: 1.6rem; }
+  &.s-3 { font-size: 1.5rem; }
+  &.s-4 { font-size: 1.4rem; }
+  &.s-5 { font-size: 1.35rem; }
+  &.small { font-size: 1.25rem; }
+}
+
+#class-level { width: 97%; }
+
+.txt_input {
+width: 100%;
+height: 100%;
+padding: .5rem;
+font-size: 2rem;
+text-align: center;
+background-color: $color-input;
+
+&.-character {
+  height: 3.2rem;
+  font-size: 2.5vw;
+  z-index: 1;
+  
+  &.s-3 { font-size: 2rem; }
+  &.s-4 { font-size: 1.9rem; }
+  &.s-5 { font-size: 1.8rem; }
+  &.small { font-size: 1.6rem; }
+  }
+  
+  &.-default { @extend %calcFontDefault }
+  
+  &.-max_points { 
+    font-size: 3.5rem;
+    &.s-1 { font-size: 2.3rem; }
+  }
+  
+  &.-historic { @extend %calcFontDefault }
+  
+  &.-attribute {
+    border-radius: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  &.-attack { 
+    font-size: 1.5rem;
+    &.s-4 { font-size: 1.2rem; }
+    &.s-5 { font-size: 1.1rem; }
+    &.small { font-size: 1rem; }
+  }
+
+  &.-others {
+    position: relative;
+    width: 80%;
+    height: 92%;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  &.-armor_and_shield {
+    font-size: 1.4rem;
+    padding: .3rem;
+    &.s-1 { font-size: 1.35rem; }
+    &.s-2 { font-size: 1.3rem; }
+    &.s-3 { font-size: 1.25rem; }
+    &.s-4 { font-size: 1.2rem; }
+    &.s-5 { font-size: 1.1rem; }
+    &.small { font-size: 1rem; }
+  }
+  &.-experience { @extend %calcFontDefault }
+
+  &.-displacement { @extend %calcFontDefault }
+
+  &.-weight {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #000;
+    &.s-3 { font-size: 1.5rem; }
+    &.s-4 { font-size: 1.4rem; }
+    &.s-5 { font-size: 1.25rem; }
+    &.small { font-size: 1rem; }
+  }
+
+  &.-description {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #000;
+
+    &.s-1 { font-size: 1.55rem; }
+    &.s-2 { font-size: 1.5rem; }
+    &.s-3 { font-size: 1.45rem; }
+    &.s-4 { font-size: 1.4rem; }
+    &.s-5 { font-size: 1.35rem; }
+    &.small { font-size: 1.2rem; }
+  }
+
+  &.-total_tibar, &.-total_tibarO {
+    font-size: 2.2rem;
+    border-bottom: 2px solid #000;
+    border-radius: 2px;
+  }
+
+  &.-skill_outher {
+    width: 80%;
+    height: 90%;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  
+}
+
+

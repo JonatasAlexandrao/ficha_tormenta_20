@@ -1,6 +1,7 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte' 
+  import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
   export let text = ''
   export let attribut = 'For'
@@ -25,10 +26,13 @@
     <ComboBox className="skill_modifier" idName="skill_modifier" textDefault={attribut} />
   </td>
   <td class="skill_line_training"> 2 </td>
-  <td class="skill_line_others"> <input class="text_outher -{className}" id="text_outher_{num}" type="text" value="0"></td>
+  <td class="skill_line_others"> 
+    <InputDefault className="skill_outher -{className}" nameInput="skill_outher_{num}" value="0" maxlength="3" />
+  </td>
 </tr>
 
 
 <style lang="scss">
   @import "./style.scss";
+  @import "./style-svg.scss";
 </style>

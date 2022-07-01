@@ -9,5 +9,6 @@
 :global(.container_health_mana > svg path, .container_health_mana > svg polygon)  {
   fill: $color-fill;
   stroke:$color-stroke;
+  stroke-width: 1px;
 }
 

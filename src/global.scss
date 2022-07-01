@@ -5,6 +5,7 @@ $color-background: #adacad;
 $color-fill: #00a98a;
 $color-fill-dark: #0c957c;
 $color-stroke: #000000;
+$color-input: rgba(0, 0, 0, 0.2);
 
 
 // ====== Placeholder ======
@@ -23,12 +24,7 @@ $color-stroke: #000000;
 :global(.txt_label) {
   text-align: center;
 }
-:global(.txt_input) {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 1.8rem;
-}
+
 
 
 

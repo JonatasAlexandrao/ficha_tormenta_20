@@ -19,8 +19,8 @@
   
   .columns {
     display: grid;
-    grid-template-rows: 20% 38% 38%;
-    gap: 4%;
+    grid-template-rows: 23% 35% 35%;
+    gap: 2%;
 
     .title {
       align-self: flex-end;
@@ -29,9 +29,7 @@
       }
     }
 
-    
-    .txt_input.-armor_and_shield {
-      font-size: 1.4rem;
+    .container_input_armor_and_shield {
       border-bottom: #000 2px solid;
     }
   }

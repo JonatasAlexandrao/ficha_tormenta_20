@@ -4,16 +4,16 @@
   height: 18rem;
 
   margin-bottom: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 
   z-index: 1;
 
   .table_attack {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
+    border-collapse: collapse;
 
     tr { height: 16%; }
     th { width: 14%; }
+    td { height: 2.65rem; }
 
     th:first-child {
       font-size: 1.2rem;
@@ -21,7 +21,6 @@
       width: 30%;
     }
 
-    .txt_input { font-size: 1.3rem; }
     
   }
 

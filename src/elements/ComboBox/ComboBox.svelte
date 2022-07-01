@@ -49,25 +49,6 @@
   </ul>
 </div>
 
-
-
 <style lang="scss">
   @import "./style.scss";
-
-  .container_combo_box.-active {
-    z-index: 9999;
-  }
-
-  .bottom_to_close {
-    position: fixed;
-    display: none;
-    height: 100vh;
-    width: 100%;
-    inset: 0;
-    z-index: 9998;
-
-    &.-active {
-      display: block;
-    }
-  }
 </style>

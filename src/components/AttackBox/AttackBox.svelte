@@ -1,5 +1,6 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
   const line = [ 'input_attack', 'input_attack_test', 'input_damage', 'input_critical', 'input_type', 'input_reach' ]
 
@@ -23,8 +24,10 @@
       {#each line as item, index}
         {#if index < 5}
           <tr>
-            {#each line as item}
-              <td><input class="txt_input" id="{item + '_'+(index+1)}" type="text"></td>
+            {#each line as item, i}
+              <td>
+                <InputDefault className="attack" nameInput="{item + '_'+(index+1)}" caracterLength={i >= 1 ? '2' : '10'}/>
+              </td>
             {/each}
           </tr>
         {/if}
