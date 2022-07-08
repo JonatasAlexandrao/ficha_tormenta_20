@@ -25,11 +25,18 @@
     */
   }
 
+  function onKeyPress(e) {
+    if(e.key === 'Enter') {
+      e.target.blur()
+    }
+  }
+
 </script>
 
 <input class="txt_input -{className} {fontSize}" 
 id={nameInput} bind:value={value}
 maxlength={maxlength}
+on:keypress={onKeyPress}
 >
 
 {#if nameInput === "class-level"}

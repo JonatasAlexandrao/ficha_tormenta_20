@@ -1,14 +1,15 @@
 <script>
+  import { intTotal } from '../../store'
   import Attribute from '../../elements/Attribute/Attribute.svelte'
 </script>
 
 <div class="container_attributes">
-  <Attribute text="for" />
-  <Attribute text="des" />
-  <Attribute text="con" />
-  <Attribute text="int" />
-  <Attribute text="sab" />
-  <Attribute text="car" />
+  <Attribute name="for" />
+  <Attribute name="des" />
+  <Attribute name="con" />
+  <Attribute name="int" bind:value={$intTotal} />
+  <Attribute name="sab" />
+  <Attribute name="car" />
 </div>
 
 <style lang="scss">

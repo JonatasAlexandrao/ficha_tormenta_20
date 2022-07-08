@@ -38,7 +38,7 @@
       <div class="container -others">
         <span class="others_title">Outros</span>
         <div class="container_input_other">
-          <InputDefault className="others" nameInput="defense_calc_others" />
+          <InputDefault className="others" nameInput="defense_calc_others" value="0" />
         </div>
 
         <!-- <input class="value -others" id="defense_calc_others" type="text" value="0">  -->

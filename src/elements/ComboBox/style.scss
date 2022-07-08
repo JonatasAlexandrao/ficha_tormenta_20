@@ -1,16 +1,5 @@
 @import "../../global.scss";
 
-.bottom_to_close {
-  position: fixed;
-  display: none;
-  height: 100vh;
-  width: 100%;
-  inset: 0;
-  z-index: 9998;
-
-  &.-active { display: block; }
-}
-
 .container_combo_box {
   position: relative;
   width: 100%;
@@ -18,8 +7,6 @@
 
   display: grid;
   align-items: center;
-
-  &.-active { z-index: 9999; }
 
   .combo_box {
     width: 100%;
