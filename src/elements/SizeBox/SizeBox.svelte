@@ -3,12 +3,12 @@
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
 
   let list = [ 
-    { description:'Minúsculo', modifier:'+5/-5' }, 
-    { description:'Pequeno', modifier: '+2/-2' },
-    { description:'Médio', modifier: '0' },
-    { description:'Grande', modifier: '-2/+2' },
-    { description:'Enorme', modifier: '-5/+5' }, 
-    { description:'Colossal', modifier: '-10/+10' }
+    { name:'Minúsculo', modifier:'+5/-5' }, 
+    { name:'Pequeno', modifier: '+2/-2' },
+    { name:'Médio', modifier: '0' },
+    { name:'Grande', modifier: '-2/+2' },
+    { name:'Enorme', modifier: '-5/+5' }, 
+    { name:'Colossal', modifier: '-10/+10' }
   ]
 
   export let valueModifier = ''

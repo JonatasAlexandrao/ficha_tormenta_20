@@ -1,4 +1,5 @@
 <script>
+  import { attributesModifier } from '../../store'
   export let className = ''
   export let idName = ''
   export let textDefault = ''
@@ -6,14 +7,7 @@
 
   let textInput = textDefault || ''
 
-  export let list = [
-    {description:'For'},
-    {description:'Des'},
-    {description:'Con'},
-    {description:'Int'},
-    {description:'Sab'},
-    {description:'Car'}
-  ]
+  export let list = $attributesModifier
 
   function clickComboBox() {
     const listBox = this.nextElementSibling
@@ -26,11 +20,9 @@
 
     if(returnValue) {
       list.forEach(element => {
-        element.description === text ? returnValue(element) : ''
+        element.name === text ? returnValue(element) : ''
       });
-    }
-    
-    
+    }  
   }
 
   function closedComboBox() {
@@ -44,7 +36,7 @@
 
   <ul class="listBox">
     {#each list as item}
-      <li on:mousedown={selected}>{item.description}</li>
+      <li on:mousedown={selected}>{item.name}</li>
     {/each}
   </ul>
 </div>
