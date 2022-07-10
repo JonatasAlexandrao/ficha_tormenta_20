@@ -7,7 +7,7 @@
 
   export let value = ''
     $: fontSize = value.length > caracterLength ? calcFontSize() : ''
-
+  export let valueLevel = ''
 
   function calcFontSize() {
     const result = value.length - caracterLength
@@ -40,7 +40,7 @@ on:keypress={onKeyPress}
 >
 
 {#if nameInput === "class-level"}
-  <input class="txt_input -level" id="level" maxlength="2" value="1">
+  <input class="txt_input -level" id="level" maxlength="2" bind:value={valueLevel}>
 {/if}
 
 

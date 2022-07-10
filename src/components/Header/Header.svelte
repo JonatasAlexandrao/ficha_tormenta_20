@@ -2,22 +2,32 @@
   import TextBoxCharacter from '../../elements/TextBoxCharacter/TextBoxCharacter.svelte'
   import TextBoxDefault from '../../elements/TextBoxDefault/TextBoxDefault.svelte'
 
+  let info = {
+    player: '',
+    character: '', 
+    race: '',
+    origin: '',
+    characterClass: '',
+    level: 1,
+    divinity: ''
+  }
+
 </script>
 
-<header class="container_names">
+<header class="container_basic_info">
   <div class="container_logo">
     <img class="logo" src="../img/logo-tormenta.png" alt="logo">
   </div>
-  <div class="container_character">
-    <TextBoxCharacter />
-    <TextBoxDefault text='Jogador' nameInput='player' caracterLength='19' />
+  <div class="container_name">
+    <TextBoxCharacter bind:value={info.player} />
+    <TextBoxDefault text='Jogador' nameInput='player' caracterLength='19' bind:value={info.character} />
   </div>
 
   <div class="container_character_info">
-    <TextBoxDefault text='Raça' nameInput='race' caracterLength='10' />
-    <TextBoxDefault text='Origem' nameInput='origin' caracterLength='15' />
-    <TextBoxDefault text='Classe & Nível' nameInput='class-level' caracterLength='16' />
-    <TextBoxDefault text='Divindade' nameInput='divinity' caracterLength='10' />
+    <TextBoxDefault text='Raça' nameInput='race' caracterLength='10' bind:value={info.race} />
+    <TextBoxDefault text='Origem' nameInput='origin' caracterLength='15' bind:value={info.origin} />
+    <TextBoxDefault text='Classe & Nível' nameInput='class-level' caracterLength='16' bind:value={info.characterClass} bind:valueLevel={info.level} />
+    <TextBoxDefault text='Divindade' nameInput='divinity' caracterLength='10' bind:value={info.divinity} />
     
   </div>
   
@@ -26,53 +36,5 @@
 
 
 <style lang="scss">
-
-  .container_names {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-bottom: 2rem;
-
-
-    .container_logo {
-      width: 100%;
-      height: 5rem;
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      margin-bottom: 2rem;
-
-      .logo {
-        max-height: 100%;
-      }
-    }
-
-    .container_character {
-      width: 80%;
-      height: 4.5rem;
-      display: grid;
-      grid-template-columns: 60% 40%;
-      justify-content: center;
-      align-items: flex-end;
-      gap: 2%;
-      margin-bottom: 2.5rem;
-    }
-
-    .container_character_info {
-      width: 100%;
-      display: flex;
-      padding: 0 1rem;
-      justify-content: space-between;
-    }
-
-    
-    
-  }
-
-
+  @import "./style.scss";
 </style>
