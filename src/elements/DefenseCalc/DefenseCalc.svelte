@@ -1,14 +1,31 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import { attributesModifier } from '../../store.js'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
+
+  export let defenseInfo = ''
+
+  // ======== Modifier =======================
+  let i = 0
+  function modifierComboBox(attributeSelected) {
+    $attributesModifier.forEach((element, index) => {
+      element.name === attributeSelected ? i = index : ''
+    })
+  }
+  modifierComboBox(defenseInfo.modifierAttribute)
+
+  // ======== Armor Bonus =======================
+
+  //let totalArmorBonus = () => {  }
+
 </script>
 
 <div class="defense_calc">
 
   <div class="container_defense_value">
     <span class="defense_title">Defesa</span>
-    <span class="defense_value">15</span>
+    <span class="defense_value">{defenseInfo.numDefense}</span>
   </div>
   
   <span class="value_default">=10</span>
@@ -20,9 +37,9 @@
       <div class="container -modifier">
         <div class="container_title">
           <span class="modifier_title">Mod. de</span>
-          <ComboBox className="modifier" idName="modifier" textDefault="Des" />
+          <ComboBox className="modifier" idName="modifier" textDefault="Des" returnValue={modifierComboBox} />
         </div>
-        <span class="value -modifier">5</span>
+        <span class="value -modifier">{$attributesModifier[i].value}</span>
       </div>
 
       <div class="container -armor_bonus">

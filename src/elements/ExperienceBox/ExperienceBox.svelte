@@ -1,11 +1,13 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
+
+  export let value = ''
 </script>
 
 <div class="experience_box">
   <label class="txt_label -experience" for="experience">Pontos de Experiência</label>
-  <InputDefault className="experience" nameInput="experience" caracterLength="8" />
+  <InputDefault className="experience" nameInput="experience" caracterLength="8" bind:value={value} />
   <img src="../img/Defesa/caixa-experiencia.svg" alt="" use:fetchSvg>
 </div>
 

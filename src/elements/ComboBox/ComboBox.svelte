@@ -3,7 +3,7 @@
   export let className = ''
   export let idName = ''
   export let textDefault = ''
-  export let returnValue = ''
+  export let returnValue = ()=>{}
 
   let textInput = textDefault || ''
 
@@ -18,11 +18,12 @@
     const text = this.textContent
     textInput = text
 
-    if(returnValue) {
+    returnValue(text)
+    /*if(returnValue) {
       list.forEach(element => {
         element.name === text ? returnValue(element) : ''
       });
-    }  
+    }*/  
   }
 
   function closedComboBox() {

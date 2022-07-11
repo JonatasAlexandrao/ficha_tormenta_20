@@ -1,18 +1,13 @@
 <script>
-  import DefenseCalc from "../../elements/DefenseCalc/DefenseCalc.svelte"
-  import ArmorAndShield from '../../elements/ArmorAndShield/ArmorAndShield.svelte'
-  import ExperienceBox from "../../elements/ExperienceBox/ExperienceBox.svelte";
-  import Proficiency from "../../elements/Proficiency/Proficiency.svelte"
+
+  import DefenseAndExperience from "../DefenceAndExperience/DefenceAndExperience.svelte"
+  import Proficiency from "../Proficiency/Proficiency.svelte"
   import SizeBox from "../../elements/SizeBox/SizeBox.svelte"
   import DisplacementBox from "../../elements/DisplacementBox/DisplacementBox.svelte"
 </script>
 
 <div class="container_other_info">
-  <div class="container_defense_other">
-    <DefenseCalc />
-    <ArmorAndShield />
-    <ExperienceBox />
-  </div>
+  <DefenseAndExperience />
   <div class="container_proficiencies_other">
     <Proficiency />
     <SizeBox />
@@ -32,15 +27,6 @@
     grid-template-columns: 58% 40%;
     grid-template-rows: 19rem;
     gap: 2%;
-
-    .container_defense_other {
-      width: 100%;
-      height: 100%;
-
-      display: grid;
-      grid-template-rows: 8rem 7rem 3.2rem;
-      align-content: space-between;  
-    }
     .container_proficiencies_other {
       width: 100%;
       height: 100%;
