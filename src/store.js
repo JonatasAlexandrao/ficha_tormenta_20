@@ -24,3 +24,46 @@ export const attributesModifier = derived(attributesTotal, ($attributesTotal) =>
   return response
 })
 
+/*export const defenseInfo = writable ({
+  numDefense: 10,
+  modifierAttribute: 'Des',
+  numModifier: 0,
+  armorBonus: 0,
+  shieldBonus: 0,
+  otherBonus: 0,
+  armorPenalty: 0
+})
+*/
+
+export const armor = writable({
+  name: '', 
+  bonus: 0, 
+  penalty: 0
+})
+
+export const shield = writable({
+  name: '', 
+  bonus: 0, 
+  penalty: 0
+})
+
+export const otherNumDefense = writable(0)
+
+/*Penalidade de armadura afeta as Perícias Acrobacia e Furtividade! */
+export const armorPenalty = derived([armor, shield], ([$armor, $shield]) => {
+  const negative = (num) => num < 0 ? num : -num
+  const armor = negative(parseInt($armor.penalty))
+  const shield = negative(parseInt($shield.penalty))
+
+  return armor + shield
+})
+
+export const difficultyClass = derived([armor, shield, otherNumDefense], ([$armor, $shield, $otherNumDefense]) => {
+
+  const bonus =  parseInt($armor.bonus) + parseInt($shield.bonus)
+  const other = parseInt($otherNumDefense)
+  
+  return (10 + (bonus + other))
+})
+
+

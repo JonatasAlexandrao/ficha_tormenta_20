@@ -1,10 +1,10 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { attributesModifier } from '../../store.js'
+  import { attributesModifier, armor, shield, otherNumDefense, armorPenalty, difficultyClass } from '../../store.js'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
-  export let defenseInfo = ''
+  export let modifierDefault = 'For'
 
   // ======== Modifier =======================
   let i = 0
@@ -13,11 +13,10 @@
       element.name === attributeSelected ? i = index : ''
     })
   }
-  modifierComboBox(defenseInfo.modifierAttribute)
+  modifierComboBox(modifierDefault)
 
-  // ======== Armor Bonus =======================
+  console.log($difficultyClass)
 
-  //let totalArmorBonus = () => {  }
 
 </script>
 
@@ -25,7 +24,7 @@
 
   <div class="container_defense_value">
     <span class="defense_title">Defesa</span>
-    <span class="defense_value">{defenseInfo.numDefense}</span>
+    <span class="defense_value">{$difficultyClass}</span>
   </div>
   
   <span class="value_default">=10</span>
@@ -37,28 +36,26 @@
       <div class="container -modifier">
         <div class="container_title">
           <span class="modifier_title">Mod. de</span>
-          <ComboBox className="modifier" idName="modifier" textDefault="Des" returnValue={modifierComboBox} />
+          <ComboBox className="modifier" idName="modifier" textDefault={modifierDefault} returnValue={modifierComboBox} />
         </div>
         <span class="value -modifier">{$attributesModifier[i].value}</span>
       </div>
 
       <div class="container -armor_bonus">
         <span class="armor_bonus_title">Bonus de Armadura</span>
-        <span class="value -armor_bonus">5</span>
+        <span class="value -armor_bonus">{$armor.bonus}</span>
       </div>
 
       <div class="container -shield_bonus">
         <span class="shield_bonus_title">Bonus de Escudo</span>
-        <span class="value -shield_bonus">3</span>
+        <span class="value -shield_bonus">{$shield.bonus}</span>
       </div>
 
       <div class="container -others">
         <span class="others_title">Outros</span>
         <div class="container_input_other">
-          <InputDefault className="others" nameInput="defense_calc_others" value="0" />
+          <InputDefault className="others" nameInput="defense_calc_others" bind:value={$otherNumDefense} />
         </div>
-
-        <!-- <input class="value -others" id="defense_calc_others" type="text" value="0">  -->
       </div>
 
     </div>
@@ -66,7 +63,7 @@
 
     <div class="container_armor_penalty">
       <span class="armor_penalty">Penalidade de Armadura</span>
-      <span class="penalty_value"> -5 </span>
+      <span class="penalty_value"> {$armorPenalty} </span>
     </div>
     
   </div>

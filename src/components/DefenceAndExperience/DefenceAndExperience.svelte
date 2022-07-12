@@ -1,4 +1,5 @@
 <script>
+  import { attributesModifier, armor, shield } from '../../store'
   import DefenseCalc from "../../elements/DefenseCalc/DefenseCalc.svelte"
   import ArmorAndShield from '../../elements/ArmorAndShield/ArmorAndShield.svelte'
   import ExperienceBox from "../../elements/ExperienceBox/ExperienceBox.svelte";
@@ -17,23 +18,20 @@
     { name: '', numDefense: 5, penalty: '' },
     { name: '', numDefense: 2, penalty: '' }
   ]
-  let teste = 10
-    $: totalDefenseBonus =  teste + 5
 
   let experience = ''
 
 
   //defense.armorBonus = armorAndShield[0].numDefense + armorAndShield[1].numDefense
   //console.log(defense)
-  console.log(totalDefenseBonus)
+  console.log($attributesModifier)
 
 </script>
 
   <div class="container_defense_and_experience">
-    <DefenseCalc defenseInfo={defense} />
-    <ArmorAndShield bind:armorInfo={armorAndShield} />
+    <DefenseCalc modifierDefault="Des" />
+    <ArmorAndShield />
     <ExperienceBox bind:value={experience} />
-    {totalDefenseBonus}
   </div>
 
 <style lang="scss">
