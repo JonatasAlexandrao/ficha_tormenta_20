@@ -1,30 +1,28 @@
 <script>
-  import { attributesModifier, armor, shield } from '../../store'
   import DefenseCalc from "../../elements/DefenseCalc/DefenseCalc.svelte"
   import ArmorAndShield from '../../elements/ArmorAndShield/ArmorAndShield.svelte'
   import ExperienceBox from "../../elements/ExperienceBox/ExperienceBox.svelte";
 
-  let defense = {
-    numDefense: 10,
-    modifierAttribute: 'Des',
-    numModifier: 0,
-    armorBonus: 0,
-    shieldBonus: 0,
-    otherBonus: 0,
-    armorPenalty: 0
-  }
+  // let defense = {
+  //   numDefense: 10,
+  //   modifierAttribute: 'Des',
+  //   numModifier: 0,
+  //   armorBonus: 0,
+  //   shieldBonus: 0,
+  //   otherBonus: 0,
+  //   armorPenalty: 0
+  // }
 
-  let armorAndShield = [
-    { name: '', numDefense: 5, penalty: '' },
-    { name: '', numDefense: 2, penalty: '' }
-  ]
-
-  let experience = ''
-
+  // let armorAndShield = [
+  //   { name: '', numDefense: 5, penalty: '' },
+  //   { name: '', numDefense: 2, penalty: '' }
+  // ]
 
   //defense.armorBonus = armorAndShield[0].numDefense + armorAndShield[1].numDefense
   //console.log(defense)
-  console.log($attributesModifier)
+  //console.log($attributesModifier)
+
+  let experience = ''
 
 </script>
 

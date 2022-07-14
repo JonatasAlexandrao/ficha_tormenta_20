@@ -24,16 +24,13 @@ export const attributesModifier = derived(attributesTotal, ($attributesTotal) =>
   return response
 })
 
-/*export const defenseInfo = writable ({
-  numDefense: 10,
-  modifierAttribute: 'Des',
-  numModifier: 0,
-  armorBonus: 0,
-  shieldBonus: 0,
-  otherBonus: 0,
-  armorPenalty: 0
-})
-*/
+
+
+
+/*================================*
+  MutationObserver js - Pesquisar
+==================================*/
+//export const armorModifier = writable(0)
 
 export const armor = writable({
   name: '', 
@@ -57,6 +54,9 @@ export const armorPenalty = derived([armor, shield], ([$armor, $shield]) => {
 
   return armor + shield
 })
+
+//export const difficultyClass = writable(0)
+
 
 export const difficultyClass = derived([armor, shield, otherNumDefense], ([$armor, $shield, $otherNumDefense]) => {
 

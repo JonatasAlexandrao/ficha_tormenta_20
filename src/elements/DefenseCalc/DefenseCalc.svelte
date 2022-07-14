@@ -4,27 +4,26 @@
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
-  export let modifierDefault = 'For'
+  let modifierDefault = 'For'
+  let index = 0
+  let returnValue = (selected) => { index = selected }
 
-  // ======== Modifier =======================
-  let i = 0
-  function modifierComboBox(attributeSelected) {
-    $attributesModifier.forEach((element, index) => {
-      element.name === attributeSelected ? i = index : ''
-    })
+  $: valueModifier = isNumber($attributesModifier[index].value)
+  $: bonus = isNumber($armor.bonus) + isNumber($shield.bonus)
+  $: other = isNumber($otherNumDefense)
+  $: resultado = (10 + (valueModifier + bonus + other))
+
+  function isNumber(num) { 
+    return num ? parseInt(num) : 0
   }
-  modifierComboBox(modifierDefault)
-
-  console.log($difficultyClass)
-
-
+ 
 </script>
 
 <div class="defense_calc">
 
   <div class="container_defense_value">
     <span class="defense_title">Defesa</span>
-    <span class="defense_value">{$difficultyClass}</span>
+    <span class="defense_value">{resultado}</span>
   </div>
   
   <span class="value_default">=10</span>
@@ -36,9 +35,9 @@
       <div class="container -modifier">
         <div class="container_title">
           <span class="modifier_title">Mod. de</span>
-          <ComboBox className="modifier" idName="modifier" textDefault={modifierDefault} returnValue={modifierComboBox} />
+          <ComboBox className="modifier" idName="modifier" textDefault={modifierDefault} returnValue={returnValue}/>
         </div>
-        <span class="value -modifier">{$attributesModifier[i].value}</span>
+        <span class="value -modifier">{$attributesModifier[index].value}</span>
       </div>
 
       <div class="container -armor_bonus">

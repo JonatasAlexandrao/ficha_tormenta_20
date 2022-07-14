@@ -4,10 +4,8 @@
   export let idName = ''
   export let textDefault = ''
   export let returnValue = ()=>{}
-
+ 
   let textInput = textDefault || ''
-
-  export let list = $attributesModifier
 
   function clickComboBox() {
     const listBox = this.nextElementSibling
@@ -18,12 +16,9 @@
     const text = this.textContent
     textInput = text
 
-    returnValue(text)
-    /*if(returnValue) {
-      list.forEach(element => {
-        element.name === text ? returnValue(element) : ''
-      });
-    }*/  
+    $attributesModifier.forEach((item, index) => {
+      if(item.name === text) { returnValue(index) }
+    })
   }
 
   function closedComboBox() {
@@ -36,7 +31,7 @@
   <input class="combo_box -{className}" id={idName} type="text" value={textInput} on:click={clickComboBox} readonly on:blur={closedComboBox}>
 
   <ul class="listBox">
-    {#each list as item}
+    {#each $attributesModifier as item}
       <li on:mousedown={selected}>{item.name}</li>
     {/each}
   </ul>
