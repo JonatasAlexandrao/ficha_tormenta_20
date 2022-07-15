@@ -1,19 +1,7 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import { info__attack } from '../../store'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
-
-  let attackInfo = []
-
-  for (let index = 0; index < 5; index++) {
-    attackInfo[index] = [
-      { description: 'Ataque', idName: `input_attack_${index+1}`, value: '' },
-      { description: 'Teste', idName: `input_attack_test_${index+1}`, value: '' },
-      { description: 'Dano', idName: `input_damage_${index+1}`, value: '' },
-      { description: 'Crítico', idName: `input_critical_${index+1}`, value: '' },
-      { description: 'Tipo', idName: `input_type_${index+1}`, value: '' },
-      { description: 'Alcance', idName: `input_reach_${index+1}`, value: '' }
-    ] 
-  }
 
 </script>
 
@@ -33,7 +21,7 @@
 
     <tbody>
  
-      {#each attackInfo as line}
+      {#each $info__attack as line}
         <tr>
           {#each line as item, i}
             <td>

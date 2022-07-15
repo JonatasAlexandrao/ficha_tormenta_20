@@ -3,31 +3,34 @@
   import ArmorAndShield from '../../elements/ArmorAndShield/ArmorAndShield.svelte'
   import ExperienceBox from "../../elements/ExperienceBox/ExperienceBox.svelte";
 
-  // let defense = {
-  //   numDefense: 10,
-  //   modifierAttribute: 'Des',
-  //   numModifier: 0,
-  //   armorBonus: 0,
-  //   shieldBonus: 0,
-  //   otherBonus: 0,
-  //   armorPenalty: 0
-  // }
+  /*let infoDefence = {
+    difficultyClass: '',
+    attributeModifier: '',
+    bonusArmor: '',
+    bonusShield: '',
+    otherBonus: '',
+    penalty: ''
+  }
 
-  // let armorAndShield = [
-  //   { name: '', numDefense: 5, penalty: '' },
-  //   { name: '', numDefense: 2, penalty: '' }
-  // ]
+  let infoArmor = {
+    armorName: '',
+    armorDefense: '',
+    armorPenalty:''
+  }
 
-  //defense.armorBonus = armorAndShield[0].numDefense + armorAndShield[1].numDefense
-  //console.log(defense)
-  //console.log($attributesModifier)
+  let infoShield = {
+    shieldName: '',
+    shieldDefense: '',
+    shieldPenalty:''
+  }*/
 
   let experience = ''
+
 
 </script>
 
   <div class="container_defense_and_experience">
-    <DefenseCalc modifierDefault="Des" />
+    <DefenseCalc />
     <ArmorAndShield />
     <ExperienceBox bind:value={experience} />
   </div>

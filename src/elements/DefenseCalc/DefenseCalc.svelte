@@ -1,17 +1,17 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { attributesModifier, armor, shield, otherNumDefense, armorPenalty, difficultyClass } from '../../store.js'
+  import { attributesModifier, armor, shield, otherNumDefense, armorPenalty } from '../../store.js'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
-  let modifierDefault = 'For'
-  let index = 0
+  export let modifierDefault = 'Des'
+  let index = 1
   let returnValue = (selected) => { index = selected }
 
   $: valueModifier = isNumber($attributesModifier[index].value)
   $: bonus = isNumber($armor.bonus) + isNumber($shield.bonus)
   $: other = isNumber($otherNumDefense)
-  $: resultado = (10 + (valueModifier + bonus + other))
+  $: difficultyClass = (10 + (valueModifier + bonus + other))
 
   function isNumber(num) { 
     return num ? parseInt(num) : 0
@@ -23,7 +23,7 @@
 
   <div class="container_defense_value">
     <span class="defense_title">Defesa</span>
-    <span class="defense_value">{resultado}</span>
+    <span class="defense_value">{difficultyClass}</span>
   </div>
   
   <span class="value_default">=10</span>

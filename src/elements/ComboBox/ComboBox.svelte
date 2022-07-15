@@ -4,6 +4,7 @@
   export let idName = ''
   export let textDefault = ''
   export let returnValue = ()=>{}
+  export let list = $attributesModifier
  
   let textInput = textDefault || ''
 
@@ -16,7 +17,7 @@
     const text = this.textContent
     textInput = text
 
-    $attributesModifier.forEach((item, index) => {
+    list.forEach((item, index) => {
       if(item.name === text) { returnValue(index) }
     })
   }
@@ -31,7 +32,7 @@
   <input class="combo_box -{className}" id={idName} type="text" value={textInput} on:click={clickComboBox} readonly on:blur={closedComboBox}>
 
   <ul class="listBox">
-    {#each $attributesModifier as item}
+    {#each list as item}
       <li on:mousedown={selected}>{item.name}</li>
     {/each}
   </ul>

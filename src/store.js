@@ -14,24 +14,36 @@ export const attributesModifier = derived(attributesTotal, ($attributesTotal) =>
   
   $attributesTotal.forEach(($attribute, index) => {
     if(isNaN($attribute.value)) {
-      response[index] = { name:$attribute.name, value:0 }
+      response[index] = { name:$attribute.name, total:$attribute.value, value:0 }
     }
     else {
-      response[index] = { name:$attribute.name, value:Math.trunc(($attribute.value - 10) / 2) }
+      response[index] = { name:$attribute.name, total:$attribute.value, value:Math.trunc(($attribute.value - 10) / 2) }
     }
   });
 
   return response
 })
 
+/* ============== AttackBox ============== */
+
+function attackInfo() {
+  let attackInfo = []
+    for (let index = 0; index < 5; index++) {
+      attackInfo[index] = [ 
+        { description: 'Ataque', idName: `input_attack_${index+1}`, value: '' },
+        { description: 'Teste', idName: `input_attack_test_${index+1}`, value: '' },
+        { description: 'Dano', idName: `input_damage_${index+1}`, value: '' },
+        { description: 'Crítico', idName: `input_critical_${index+1}`, value: '' },
+        { description: 'Tipo', idName: `input_type_${index+1}`, value: '' },
+        { description: 'Alcance', idName: `input_reach_${index+1}`, value: '' }
+      ]
+    }
+    return attackInfo 
+}
+export const info__attack = writable(attackInfo())
 
 
-
-/*================================*
-  MutationObserver js - Pesquisar
-==================================*/
-//export const armorModifier = writable(0)
-
+/* ============== Defense ============== */
 export const armor = writable({
   name: '', 
   bonus: 0, 
@@ -55,15 +67,14 @@ export const armorPenalty = derived([armor, shield], ([$armor, $shield]) => {
   return armor + shield
 })
 
-//export const difficultyClass = writable(0)
+/* ============== Proficiency ============== */
+export const info__proficiency = writable('')
 
-
-export const difficultyClass = derived([armor, shield, otherNumDefense], ([$armor, $shield, $otherNumDefense]) => {
-
-  const bonus =  parseInt($armor.bonus) + parseInt($shield.bonus)
-  const other = parseInt($otherNumDefense)
-  
-  return (10 + (bonus + other))
+/* ============== SizeBox ============== */
+export const info__size = writable({
+  selected: '',
+  modifier: ''
 })
 
-
+/* ============== Displacement ============== */
+export const info__displacement = writable('')
