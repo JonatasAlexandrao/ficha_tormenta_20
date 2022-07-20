@@ -4,6 +4,7 @@
   export let caracterLength = 8
   export let className = 'default'
   export let maxlength = ''
+  export let readonly = false
 
   export let value = ''
     $: fontSize = value.length > caracterLength ? calcFontSize() : ''
@@ -34,9 +35,10 @@
 </script>
 
 <input class="txt_input -{className} {fontSize}" 
-id={nameInput} bind:value={value}
+id={nameInput} name={nameInput} bind:value={value}
 maxlength={maxlength}
 on:keypress={onKeyPress}
+readonly={readonly}
 >
 
 {#if nameInput === "class-level"}

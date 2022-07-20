@@ -1,6 +1,6 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { info__size } from '../../store'
+  import { VAR_size } from '../../store'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
 
   let list = [ 
@@ -13,8 +13,8 @@
   ]
 
   function returnValue(index) {
-    $info__size.selected = list[index].name
-    $info__size.modifier = list[index].modifier
+    $VAR_size.selected = list[index].name
+    $VAR_size.modifier = list[index].modifier
   }
 
 </script>
@@ -23,7 +23,7 @@
   <label class="txt_label -size" for="size">Tamanho</label>
   <ComboBox className="size" idName="size" list={list} returnValue={returnValue} />
 
-  <span class="text_modifiers">{$info__size.modifier}</span>
+  <span class="text_modifiers">{$VAR_size.modifier}</span>
   <img src="../img/Defesa/tamanho.svg" alt="" use:fetchSvg>
 </div>
 

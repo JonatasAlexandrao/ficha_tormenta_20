@@ -1,6 +1,6 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { attributesModifier, armor, shield, otherNumDefense, armorPenalty } from '../../store.js'
+  import { VAR_attributesModifier, VAR_armor, VAR_shield, VAR_otherNumDefense, VAR_armorPenalty } from '../../store.js'
   import ComboBox from '../../elements/ComboBox/ComboBox.svelte'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
@@ -8,9 +8,9 @@
   let index = 1
   let returnValue = (selected) => { index = selected }
 
-  $: valueModifier = isNumber($attributesModifier[index].value)
-  $: bonus = isNumber($armor.bonus) + isNumber($shield.bonus)
-  $: other = isNumber($otherNumDefense)
+  $: valueModifier = isNumber($VAR_attributesModifier[index].value)
+  $: bonus = isNumber($VAR_armor.bonus) + isNumber($VAR_shield.bonus)
+  $: other = isNumber($VAR_otherNumDefense)
   $: difficultyClass = (10 + (valueModifier + bonus + other))
 
   function isNumber(num) { 
@@ -37,23 +37,23 @@
           <span class="modifier_title">Mod. de</span>
           <ComboBox className="modifier" idName="modifier" textDefault={modifierDefault} returnValue={returnValue}/>
         </div>
-        <span class="value -modifier">{$attributesModifier[index].value}</span>
+        <span class="value -modifier">{$VAR_attributesModifier[index].value}</span>
       </div>
 
       <div class="container -armor_bonus">
         <span class="armor_bonus_title">Bonus de Armadura</span>
-        <span class="value -armor_bonus">{$armor.bonus}</span>
+        <span class="value -armor_bonus">{$VAR_armor.bonus}</span>
       </div>
 
       <div class="container -shield_bonus">
         <span class="shield_bonus_title">Bonus de Escudo</span>
-        <span class="value -shield_bonus">{$shield.bonus}</span>
+        <span class="value -shield_bonus">{$VAR_shield.bonus}</span>
       </div>
 
       <div class="container -others">
         <span class="others_title">Outros</span>
         <div class="container_input_other">
-          <InputDefault className="others" nameInput="defense_calc_others" bind:value={$otherNumDefense} />
+          <InputDefault className="others" nameInput="defense_calc_others" bind:value={$VAR_otherNumDefense} />
         </div>
       </div>
 
@@ -62,7 +62,7 @@
 
     <div class="container_armor_penalty">
       <span class="armor_penalty">Penalidade de Armadura</span>
-      <span class="penalty_value"> {$armorPenalty} </span>
+      <span class="penalty_value"> {$VAR_armorPenalty} </span>
     </div>
     
   </div>

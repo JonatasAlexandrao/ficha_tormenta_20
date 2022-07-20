@@ -1,6 +1,6 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { info__attack } from '../../store'
+  import { VAR_infoAttack } from '../../store'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
 </script>
@@ -21,11 +21,11 @@
 
     <tbody>
  
-      {#each $info__attack as line}
+      {#each $VAR_infoAttack as line}
         <tr>
           {#each line as item, i}
             <td>
-              <InputDefault className="attack" nameInput={item.idName} caracterLength={i >= 1 ? '2' : '10'} bind:value={item.value} />
+              <InputDefault className="attack" nameInput={item.nameInput} caracterLength={i >= 1 ? '2' : '10'} bind:value={item.value} />
             </td>
           {/each}
         </tr>

@@ -1,10 +1,10 @@
 <script>
-  import { attributesModifier } from '../../store'
+  import { VAR_attributesModifier } from '../../store'
   export let className = ''
   export let idName = ''
   export let textDefault = ''
   export let returnValue = ()=>{}
-  export let list = $attributesModifier
+  export let list = $VAR_attributesModifier
  
   let textInput = textDefault || ''
 

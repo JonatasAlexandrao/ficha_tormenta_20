@@ -1,12 +1,12 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { info__displacement } from '../../store'
+  import { VAR_displacement } from '../../store'
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 </script>
 
 <div class="displacement_box">
   <label class="txt_label -displacement" for="displacement">Deslocamento</label>
-  <InputDefault className="displacement" nameInput="displacement" caracterLength="5" bind:value={$info__displacement} />
+  <InputDefault className="displacement" nameInput="displacement" caracterLength="5" bind:value={$VAR_displacement} />
   <img src="../img/Defesa/deslocamento.svg" alt="" use:fetchSvg>
 </div>
 

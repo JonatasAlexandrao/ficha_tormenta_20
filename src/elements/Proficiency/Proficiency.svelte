@@ -1,11 +1,11 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
-  import { info__proficiency } from '../../store'
+  import { VAR_infoProficiency } from '../../store'
 </script>
 
 <div class="proficiency">
   <label class="txt_label -proficiency" for="proficiency">Proficiências</label>
-  <textarea class="txt_textarea" id="proficiency" cols="30" rows="10" autocomplete="off" bind:value={$info__proficiency}></textarea>
+  <textarea class="txt_textarea" id="proficiency" cols="30" rows="10" autocomplete="off" bind:value={$VAR_infoProficiency}></textarea>
   <img src="../img/Defesa/Proficiencias.svg" alt="" use:fetchSvg>
 </div>
 

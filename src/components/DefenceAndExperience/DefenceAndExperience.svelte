@@ -3,36 +3,12 @@
   import ArmorAndShield from '../../elements/ArmorAndShield/ArmorAndShield.svelte'
   import ExperienceBox from "../../elements/ExperienceBox/ExperienceBox.svelte";
 
-  /*let infoDefence = {
-    difficultyClass: '',
-    attributeModifier: '',
-    bonusArmor: '',
-    bonusShield: '',
-    otherBonus: '',
-    penalty: ''
-  }
-
-  let infoArmor = {
-    armorName: '',
-    armorDefense: '',
-    armorPenalty:''
-  }
-
-  let infoShield = {
-    shieldName: '',
-    shieldDefense: '',
-    shieldPenalty:''
-  }*/
-
-  let experience = ''
-
-
 </script>
 
   <div class="container_defense_and_experience">
     <DefenseCalc />
     <ArmorAndShield />
-    <ExperienceBox bind:value={experience} />
+    <ExperienceBox />
   </div>
 
 <style lang="scss">

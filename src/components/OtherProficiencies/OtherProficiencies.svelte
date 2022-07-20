@@ -1,5 +1,5 @@
 <script>
-  import Proficiency from "../Proficiency/Proficiency.svelte"
+  import Proficiency from "../../elements/Proficiency/Proficiency.svelte"
   import SizeBox from "../../elements/SizeBox/SizeBox.svelte"
   import DisplacementBox from "../../elements/DisplacementBox/DisplacementBox.svelte"
 

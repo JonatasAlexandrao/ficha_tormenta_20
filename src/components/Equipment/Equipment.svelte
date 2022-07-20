@@ -1,19 +1,19 @@
 <script>
   import { fetchSvg } from '../../functionSVG.js'
+  import { VAR_totalWeight, VAR_maxWeight, VAR_totalLifting, VAR_totalTibar, VAR_totalTibarO } from '../../store'
 
   import EquipmentLine from "../../elements/EquipmentLine/EquipmentLine.svelte";
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
- 
 </script>
 
 <div class="container_equipment">
   
-  <span class="title">Equipamento</span>
+  <h3 class="title">Equipamento</h3>
 
   <div class="header_equipment">
     <span>Item</span>
-    <span>Peso</span>
+    <span>Peso (Kg)</span>
   </div>
 
   <div class="content_equipment">
@@ -38,23 +38,30 @@
   <div class="container_totals">
 
     <div class="maximun_weight">
-      <p>10.00 <span>de</span>  30</p>
-      <p>Carga Máxima (3x Força)</p>
+      <span>
+        <InputDefault nameInput="total_weight" className="total_weight" value={$VAR_totalWeight + 'Kg'} readonly={true} />
+        <span>de</span>
+        <InputDefault nameInput="max_weight" className="max_weight" value={$VAR_maxWeight} readonly={true} />
+      </span>
+      
+      <label for="total_weight">Carga Máxima (3x Força)</label>
     </div>
 
-    <div class="lifting">
-      <p>100</p>
-      <p>Levantar (até 10x Força)</p>
+    <div class="total_lifting">
+      <span>
+        <InputDefault nameInput="total_lifting" className="total_lifting" value={$VAR_totalLifting} readonly={true} />
+      </span>
+      <label for="total_lifting">Levantar (até 10x Força)</label>
     </div>
 
     <div class="total_money">
       <div>
         <label for="total_tibar">T$:</label>
-        <InputDefault className="total_tibar" nameInput="total_tibar" />
+        <InputDefault className="total_tibar" nameInput="total_tibar" value={$VAR_totalTibar} />
       </div>
       <div>
         <label for="total_tibarO">TO:</label>
-        <InputDefault className="total_tibarO" nameInput="total_tibarO" />
+        <InputDefault className="total_tibarO" nameInput="total_tibarO" value={$VAR_totalTibarO} />
       </div>
     </div>
 
