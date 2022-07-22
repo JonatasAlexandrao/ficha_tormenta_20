@@ -37,11 +37,11 @@
   
   <div class="container_totals">
 
-    <div class="maximun_weight">
+    <div class="maximum_weight">
       <span>
         <InputDefault nameInput="total_weight" className="total_weight" value={$VAR_totalWeight + 'Kg'} readonly={true} />
         <span>de</span>
-        <InputDefault nameInput="max_weight" className="max_weight" value={$VAR_maxWeight} readonly={true} />
+        <InputDefault nameInput="max_weight" className="max_weight" value={$VAR_maxWeight + 'Kg'} readonly={true} /> 
       </span>
       
       <label for="total_weight">Carga Máxima (3x Força)</label>
