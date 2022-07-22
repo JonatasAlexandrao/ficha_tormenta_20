@@ -14,7 +14,15 @@
     border-bottom: rgba(0, 0, 0, .2) 1px solid;
   }
 
-  .skill_line_name { .check_box { opacity: .8; } }
+  .skill_line_name { 
+    .check_box { 
+      opacity: .8;
+      cursor: pointer;
+    }
+    .check_label.-only_trained { 
+      color: rgb(172, 0, 0)
+    }
+   }
 
   .skill_line_total {
     position: relative;

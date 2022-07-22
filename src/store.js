@@ -134,8 +134,8 @@ export const VAR_totalTibarO = writable('0.00')
 /* ================ Skills ================ */
 
 export const VAR_skills = writable( [
-  { text: 'Acrobacia¹', attribute: 'Des', className: 'acrobatics', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: true, onlyTrained: true },
-  { text: 'Adestramento²', attribute: 'Car', className: 'training', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: false, onlyTrained: false },
+  { text: 'Acrobacia¹', attribute: 'Des', className: 'acrobatics', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: true, onlyTrained: false },
+  { text: 'Adestramento²', attribute: 'Car', className: 'training', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: false, onlyTrained: true },
   { text: 'Atletismo', attribute: 'For', className: 'athletics', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: false, onlyTrained: false },
   { text: 'Atuação', attribute: 'Car', className: 'performance', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: false, onlyTrained: false },
   { text: 'Cavalgar', attribute: 'Des', className: 'ride', halfLevel: 0, trained: false, others: 0, total: 0, armorPenalty: false, onlyTrained: false },
