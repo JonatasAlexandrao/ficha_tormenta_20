@@ -47,6 +47,10 @@
       grid-template-columns: 22% 22% 50%;
       gap: 3%;
 
+      .maximum_weight.-exceeded {
+        color: $color-alert;
+      }
+
       .maximum_weight, .total_lifting {
         display: grid;
         grid-template-rows: 50% 50%;

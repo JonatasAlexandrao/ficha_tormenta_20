@@ -1,3 +1,4 @@
+@import "../../global.scss";
 
 .skill_line {
   height: 3.1rem;
@@ -20,7 +21,7 @@
       cursor: pointer;
     }
     .check_label.-only_trained { 
-      color: rgb(172, 0, 0)
+      color: $color-alert;
     }
    }
 

@@ -5,6 +5,8 @@
   import EquipmentLine from "../../elements/EquipmentLine/EquipmentLine.svelte";
   import InputDefault from '../../elements/InputDefault/InputDefault.svelte'
 
+  $: exceeded = $VAR_totalWeight > $VAR_maxWeight ? '-exceeded' : ''
+
 </script>
 
 <div class="container_equipment">
@@ -37,14 +39,14 @@
   
   <div class="container_totals">
 
-    <div class="maximum_weight">
+    <div class="maximum_weight {exceeded}">
       <span>
         <InputDefault nameInput="total_weight" className="total_weight" value={$VAR_totalWeight + 'Kg'} readonly={true} />
         <span>de</span>
         <InputDefault nameInput="max_weight" className="max_weight" value={$VAR_maxWeight + 'Kg'} readonly={true} /> 
       </span>
       
-      <label for="total_weight">Carga Máxima (3x Força)</label>
+      <label for="max_weight">Carga Máxima (3x Força)</label>
     </div>
 
     <div class="total_lifting">

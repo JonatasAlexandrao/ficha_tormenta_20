@@ -13,26 +13,13 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
 
 /*=======================================*/
 
+
+
 @font-face {
   font-family: 'Tormenta20';
   src: url('./font/Tormenta.ttf');
 }
-/*font-family: Tormenta20, Arial, sans-serif;*/
 
-:root { font-size: 10px; }
+:root { font-size: 10px; --teste: rgb(0, 92, 172);}
 
-body {
-  font-family: Quattrocento Sans, sans-serif;
-  background-color: rgb(54, 54, 54);
 
-  display: flex;
-  justify-content: center;
-
-}
-
-/* .side_edge {
-  position: absolute;
-  height: 100%;
-  top: 50%;
-  
-} */

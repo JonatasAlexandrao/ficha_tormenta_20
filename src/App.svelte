@@ -8,9 +8,32 @@
   import Equipment from "./components/Equipment/Equipment.svelte";
   import Skills from "./components/Skills/Skills.svelte"
 
+  let tt = 20
+  $: teste = 'rgb(172, 0, 0)'
+
+  function aaa() {
+    tt+= 20
+    console.log(tt)
+    console.log(teste)
+    console.log(inputColor.value)
+    
+    page.style.setProperty('--teste', inputColor.value)
+  }
+
+  let page = document.querySelector('html')
+  
+  console.log(getComputedStyle(page).getPropertyValue('--teste'))
+
+  let inputColor
+  
+
 </script>
 
 <main class="ficha">
+
+  <!-- <input type="color" name="" id=""> -->
+  <button style="background-color:white;background-color:hsl({teste})" on:click={aaa}>troca</button>
+  <input type="color" name="" id="" bind:this={inputColor}>
 
   <Header />
 
