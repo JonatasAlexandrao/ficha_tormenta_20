@@ -20,6 +20,18 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
   src: url('./font/Tormenta.ttf');
 }
 
-:root { font-size: 10px; --teste: rgb(0, 92, 172);}
+:root { 
+  font-size: 10px; 
+
+  /* ======== Variaveis ======== */
+  --color-font: rgb(23, 23, 23);
+
+  --color-background: rgb(54, 54, 54);
+  --color-fill: #00a98a;
+  --color-fill-dark: #0c957c;
+  --color-stroke: rgb(23, 23, 23);
+  --color-input: rgba(0, 0, 0, 0.2);
+  --color-alert: rgb(172, 0, 0);
+}
 
 
