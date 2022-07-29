@@ -14,7 +14,7 @@
 
 </script>
 
-<main class="ficha">
+<main class="sheet">
   <ChangeColors />
   <Header />
 
@@ -40,7 +40,7 @@
 <style lang="scss">
 	@import "./global.scss";
 
-.ficha {
+.sheet {
   min-width: 80rem;
   max-width: 80rem;
   height: 100%;
@@ -50,7 +50,7 @@
 
 }
 
-.ficha::after {
+.sheet::after {
   content: '';
   display: block;
   position: absolute;
