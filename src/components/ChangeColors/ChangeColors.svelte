@@ -1,4 +1,5 @@
 <script>
+  import { fetchSvg } from '../../functionSVG.js'
 
   let page = document.querySelector('html')
 
@@ -22,6 +23,11 @@
     }
   }
 
+  //let classeTeste = '-open'
+
+  function clickaaa() {
+    this.classList.toggle('-open')
+  }
   
   
   //console.log(getComputedStyle(page).getPropertyValue('$color-fill'))
@@ -29,13 +35,24 @@
 </script>
 <div class="change-colors">
   
+  <div class="container-icon">
+    <div class="icon sun">
+      <img src="../icon/light.svg" alt="" use:fetchSvg>
+    </div>
+    <div class="icon moon">
+      <img src="../icon/dark.svg" alt="" use:fetchSvg>
+    </div>
+    <!-- <div class="icon menu">
+      <img src="../icon/gear.svg" alt="" use:fetchSvg>
+    </div> -->
 
-  <img src="../icon/light.svg" alt="">
-  <img src="../icon/dark.svg" alt="">
-  <img src="../icon/gear.svg" alt="">
-  <img src="../icon/close.svg" alt="">
-  <!-- <div class="color-box -default" id="color-box-default" on:click={aaa}>(Default)</div>
-  <div class="color-box -dark">(Dark)</div> -->
+    <div class="icon menu">
+      <span class="" on:click={clickaaa}></span>
+    </div>
+    <!-- <div class="icon close">
+      <img src="../icon/close.svg" alt="" use:fetchSvg>
+    </div> -->
+  </div>
  
   <div class="container-color-box">
     <label for="sheetBackgroundColor">Fundo da Ficha:</label>
@@ -52,67 +69,11 @@
     <input class="color-box" type="color" name="boxLineColor" id="boxLineColor" bind:value={boxLineColor}>
   </div>
 
-  
-  
-
-
   <button on:click={aaa}>Trocar</button>
 
 </div>
 
 <style lang="scss">
-  @import "../../global.scss";
-
-  .change-colors {
- 
-    width: 100%;
-    //height: 70vh;
-
-    display: grid;
-    grid-template-columns: 25rem;
-    grid-template-rows: repeat(3, 3rem) 5rem;
-    gap: .5rem;
-
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    padding: 4rem 2rem;
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    font-size: 1.8rem;
-
-    color: rgb(220, 220, 220);
-    background-color: rgb(31, 31, 31);
-    z-index: 100;
-
-    .color-box {
-      width: 100%;
-      height: 100%;
-      border: .2rem solid #000;
-
-      padding: .1rem;
-      background-color: transparent;
-      cursor: pointer;
-    }
-
-    .container-color-box {
-      width: 100%;
-      height: 100%;
-
-      display: grid;
-      grid-template-columns: 70% 30%;
-      align-items: center;
-
-    }
-
-    button {
-      width: 60%;
-      height: 70%;
-    }
-  }
-
+  @import "./style.scss";
+  @import "./style-svg.scss";
 </style>

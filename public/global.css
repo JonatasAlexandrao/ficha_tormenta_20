@@ -32,16 +32,18 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
   --color-input-default: rgba(0, 0, 0, 0.2);
   --color-alert-default: rgb(172, 0, 0);
 
+  --color-icon-light: rgb(222, 222, 222);
+  --color-icon-dark: rgb(23, 23, 23);
+
   /* ======== Variaveis dark ======== */
   /*--color-font-dark: rgb(23, 23, 23);
 
   --color-background-dark: rgb(54, 54, 54);
-  --color-fill-dark: #00a98a;
-  --color-stroke-dark: rgb(23, 23, 23);
   --color-input-dark: rgba(0, 0, 0, 0.2);
-  --color-alert-dark: rgb(172, 0, 0);*/
-
-
+  --color-alert-dark: rgb(172, 0, 0);
+  --color-fill-dark: #00a98a;
+  */
+  
   /* ======== Variaveis ======== */
   --color-font: var(--color-font-default);
 
@@ -50,6 +52,8 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
   --color-stroke: var(--color-stroke-default);
   --color-input: var(--color-input-default);
   --color-alert: var(--color-alert-default);
+
+  --color-icon: var(--color-icon-light);
 
 
 
