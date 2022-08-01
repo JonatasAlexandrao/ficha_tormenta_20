@@ -23,37 +23,36 @@
     }
   }
 
-  //let classeTeste = '-open'
-
-  function clickaaa() {
-    this.classList.toggle('-open')
-  }
-  
-  
-  //console.log(getComputedStyle(page).getPropertyValue('$color-fill'))
+  let isOpen = true
+  $: classOpen = isOpen ? '-open': ''
+  function addClassOpen() { isOpen = !isOpen }
+    
 
 </script>
-<div class="change-colors">
+<div class="change-colors {classOpen}">
   
   <div class="container-icon">
     <div class="icon sun">
       <img src="../icon/light.svg" alt="" use:fetchSvg>
     </div>
-    <div class="icon moon">
+
+    <!-- <div class="icon moon">
       <img src="../icon/dark.svg" alt="" use:fetchSvg>
-    </div>
+    </div> -->
     <!-- <div class="icon menu">
       <img src="../icon/gear.svg" alt="" use:fetchSvg>
     </div> -->
 
-    <div class="icon menu">
-      <span class="" on:click={clickaaa}></span>
+    <div class="icon menu {classOpen}" on:click={addClassOpen}>
+      <span></span>
     </div>
     <!-- <div class="icon close">
       <img src="../icon/close.svg" alt="" use:fetchSvg>
     </div> -->
   </div>
  
+
+  
   <div class="container-color-box">
     <label for="sheetBackgroundColor">Fundo da Ficha:</label>
     <input class="color-box" type="color" name="sheetBackgroundColor" id="sheetBackgroundColor" bind:value={sheetBackgroundColor}>
