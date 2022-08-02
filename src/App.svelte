@@ -1,5 +1,7 @@
 <script>
 	//export let name;
+  import { fetchSvg } from './functionSVG.js'
+
   import Header from "./components/Header/Header.svelte"
   import ImageAndPoints from "./components/ImageAndPoints/ImageAndPoints.svelte";
   import Attributes from "./components/Attributes/Attributes.svelte";
@@ -9,13 +11,34 @@
   import Skills from "./components/Skills/Skills.svelte"
   import ChangeColors from "./components/ChangeColors/ChangeColors.svelte";
 
-  
+  let isOpen = true
+  $: classOpen = isOpen ? '-open': ''
+  function addClassOpen() { isOpen = !isOpen }
   
 
 </script>
 
 <main class="sheet">
-  <ChangeColors />
+  <div class="container-icon">
+    <div class="icon sun">
+      <img src="../icon/light.svg" alt="" use:fetchSvg>
+    </div>
+
+    <!-- <div class="icon moon">
+      <img src="../icon/dark.svg" alt="" use:fetchSvg>
+    </div> -->
+    <!-- <div class="icon menu">
+      <img src="../icon/gear.svg" alt="" use:fetchSvg>
+    </div> -->
+
+    <div class="icon menu {classOpen}" on:click={addClassOpen}>
+      <span></span>
+    </div>
+    <!-- <div class="icon close">
+      <img src="../icon/close.svg" alt="" use:fetchSvg>
+    </div> -->
+  </div>
+  <ChangeColors classOpen={classOpen} />
   <Header />
 
   <div class="content">
@@ -38,52 +61,5 @@
 </main>
 
 <style lang="scss">
-	@import "./global.scss";
-
-.sheet {
-  min-width: 80rem;
-  max-width: 80rem;
-  height: 100%;
-
-  position: relative;
-  padding: 2rem 3rem;
-
-}
-
-.sheet::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-width: 80rem;
-  max-width: 80rem;
-  height: 100%;
-  z-index: -1;
-  opacity: .6;
-
-  background-image: url("../img/Fundos/Fundo-pagina.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 55% 45%;
-  gap: .5rem;
-
-}
-
-.skills {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-footer {
-  width: 100%;
-  height: 5rem;
-}
-
-
+  @import "./style.scss";
 </style>

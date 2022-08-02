@@ -1,0 +1,120 @@
+@import "./global.scss";
+
+%iconMenu {
+  width: 3rem;
+  height: .25rem;
+
+  display: block;
+
+  border-radius: .3rem;
+  background-color: $color-icon;
+  
+}
+
+
+.sheet {
+min-width: 80rem;
+max-width: 80rem;
+height: 100%;
+
+position: relative;
+padding: 2rem 3rem;
+
+}
+
+.sheet::after {
+content: '';
+display: block;
+position: absolute;
+left: 0;
+top: 0;
+min-width: 80rem;
+max-width: 80rem;
+height: 100%;
+z-index: -1;
+opacity: .6;
+
+background-image: url("../img/Fundos/Fundo-pagina.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.container-icon {
+  width: 35rem;
+  height: 5rem;
+
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-items: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 200;  
+
+  .icon {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    &.menu {
+      position: relative;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      
+      & > span {
+        @extend %iconMenu;
+        transition: all .5s ease-in-out;
+      }
+
+      &::after {
+        content: '';
+        @extend %iconMenu;
+        transition: all .5s ease-in-out;
+      }
+
+      &::before {
+        content: '';
+        @extend %iconMenu;
+        transition: all .5s ease-in-out;
+      }     
+    }
+    &.menu.-open {
+      & > span {
+        transform: translateX(-3rem);
+        background-color: transparent;  
+      }
+      &::after {
+        transform: translateY(-1rem) rotate(-45deg);
+        background-color: $color-alert;
+      }
+      &::before {
+        transform: translateY(1rem) rotate(45deg);
+        background-color: $color-alert;
+      }
+    }
+  }
+}
+
+
+.content {
+display: grid;
+grid-template-columns: 55% 45%;
+gap: .5rem;
+
+}
+
+.skills {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+footer {
+width: 100%;
+height: 5rem;
+}
