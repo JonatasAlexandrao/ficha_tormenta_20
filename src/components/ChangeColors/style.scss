@@ -19,16 +19,16 @@
   display: grid;
   grid-template-columns: 70%;
   grid-template-rows: 7rem repeat(4, 3rem);
+  grid-auto-rows: 3rem;
   justify-content: center;
   justify-items: center;
   gap: 1rem;
-  //padding-top: 8rem;
 
   position: absolute;
   top: 0;
   right: 0;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: gainsboro;
   background-color: transparent;
   

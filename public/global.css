@@ -9,6 +9,7 @@ ul { padding: 0; margin: 0}
 button { border-style: none; cursor: pointer; }
 button:focus { border-color: rgb(107, 107, 107); }
 input, textarea { border-style: none; }
+input:focus { outline: 2px solid var(--color-input-selected); }
 input, button, select, textarea { font-family: inherit; font-size: inherit; }
 
 /*=======================================*/
@@ -29,8 +30,11 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
   --color-background-default: rgb(54, 54, 54);
   --color-fill-default: #00a98a;
   --color-stroke-default: rgb(23, 23, 23);
-  --color-input-default: rgba(0, 0, 0, 0.2);
+  --color-input-default: rgba(0, 0, 0, 0.15);
+  --color-input-selected-default: rgb(0, 234, 164);
   --color-alert-default: rgb(172, 0, 0);
+
+  
 
   --color-icon-light: rgb(222, 222, 222);
   --color-icon-dark: rgb(23, 23, 23);
@@ -51,6 +55,7 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
   --color-fill: var(--color-fill-default);
   --color-stroke: var(--color-stroke-default);
   --color-input: var(--color-input-default);
+  --color-input-selected: var(--color-input-selected-default);
   --color-alert: var(--color-alert-default);
 
   --color-icon: var(--color-icon-light);

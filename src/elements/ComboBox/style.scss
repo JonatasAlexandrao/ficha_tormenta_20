@@ -29,7 +29,7 @@
     flex-direction: column;
     margin-top: .5rem;
 
-    background-color: $color-fill-dark;
+    background-color: $color-fill;
     border: 2px solid $color-stroke;
     z-index: 1;
 
@@ -48,7 +48,7 @@
       left: 50%;
       transform: translateY(-100%) translateX(-50%) rotate(45deg);
 
-      background-color: $color-fill-dark;
+      background-color: $color-fill;
       border: 2px solid $color-stroke;
     }
 
@@ -62,7 +62,7 @@
       left: 50%;
       transform: translateX(-50%);
 
-      background-color: $color-fill-dark;
+      background-color: $color-fill;
     }
     
     li {

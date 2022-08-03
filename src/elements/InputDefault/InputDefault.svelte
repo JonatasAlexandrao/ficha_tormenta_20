@@ -17,13 +17,6 @@
       return 'small'
     else
       return `s-${result}`
-  /*
-    jogador = 19
-    raça = 10
-    origem = 15
-    Classe = 16
-    divindade = 10
-    */
   }
 
   function onKeyPress(e) {
