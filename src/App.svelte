@@ -11,33 +11,33 @@
   import Skills from "./components/Skills/Skills.svelte"
   import ChangeColors from "./components/ChangeColors/ChangeColors.svelte";
 
-  let isOpen = true
+  let isOpen = false
   $: classOpen = isOpen ? '-open': ''
   function addClassOpen() { isOpen = !isOpen }
-  
 
+  let isDarkMode = false
+  $: classMode = isDarkMode ? '-darkMode': ''
+  function addClassMode() { isDarkMode = !isDarkMode }
+  
 </script>
 
 <main class="sheet">
   <div class="container-icon">
-    <div class="icon sun">
+
+    <div class="icon sun {classMode}" on:click={addClassMode}>
       <img src="../icon/light.svg" alt="" use:fetchSvg>
     </div>
 
-    <!-- <div class="icon moon">
+    <div class="icon moon {classMode}" on:click={addClassMode}>
+
       <img src="../icon/dark.svg" alt="" use:fetchSvg>
-    </div> -->
-    <!-- <div class="icon menu">
-      <img src="../icon/gear.svg" alt="" use:fetchSvg>
-    </div> -->
+    </div>
 
     <div class="icon menu {classOpen}" on:click={addClassOpen}>
       <span></span>
     </div>
-    <!-- <div class="icon close">
-      <img src="../icon/close.svg" alt="" use:fetchSvg>
-    </div> -->
   </div>
+
   <ChangeColors classOpen={classOpen} />
   <Header />
 
@@ -62,4 +62,5 @@
 
 <style lang="scss">
   @import "./style.scss";
+  @import "./style-svg.scss"
 </style>

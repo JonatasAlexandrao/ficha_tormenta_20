@@ -13,38 +13,42 @@
 
 
 .sheet {
-min-width: 80rem;
-max-width: 80rem;
-height: 100%;
+  min-width: 80rem;
+  max-width: 80rem;
+  height: 100%;
 
-position: relative;
-padding: 2rem 3rem;
+  position: relative;
+  padding: 2rem 3rem;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 80rem;
+    max-width: 80rem;
+    height: 100%;
+    z-index: -1;
+    opacity: .6;
+    
+    background-image: url("../img/Fundos/Fundo-pagina.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 }
 
-.sheet::after {
-content: '';
-display: block;
-position: absolute;
-left: 0;
-top: 0;
-min-width: 80rem;
-max-width: 80rem;
-height: 100%;
-z-index: -1;
-opacity: .6;
 
-background-image: url("../img/Fundos/Fundo-pagina.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-}
+
+
 
 .container-icon {
-  width: 35rem;
+  width: 15rem;
   height: 5rem;
 
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 60% 40%;
   justify-items: center;
   align-items: center;
 
@@ -59,6 +63,10 @@ background-size: cover;
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+
+    &.sun.-darkMode { display: none; }
+    &.moon { display: none; }
+    &.moon.-darkMode { display: block; }
 
     &.menu {
       position: relative;
@@ -97,6 +105,7 @@ background-size: cover;
         background-color: $color-alert;
       }
     }
+
   }
 }
 

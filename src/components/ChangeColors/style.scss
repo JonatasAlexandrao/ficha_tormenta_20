@@ -14,11 +14,11 @@
 
 .change-colors {
   width: 35rem;
-  height: 100%;
+  height: 5rem;
 
   display: grid;
   grid-template-columns: 70%;
-  grid-template-rows: 5rem repeat(4, 3rem);
+  grid-template-rows: 7rem repeat(4, 3rem);
   justify-content: center;
   justify-items: center;
   gap: 1rem;
@@ -27,10 +27,11 @@
   position: absolute;
   top: 0;
   right: 0;
-
+  border: none;
   font-size: 1.8rem;
   color: gainsboro;
-  background-color: #1f1f1f;
+  background-color: transparent;
+  
 
   overflow: hidden;
   z-index: 100;
@@ -38,15 +39,16 @@
   transition: all .5s ease-in-out;
 
   &.-open {
-      height: 5rem;
-      background-color: transparent;
+      height: 100%;
+      border-left: .3rem solid gainsboro;
+      background-color: #1f1f1f;
   }
 
   &::before {
     content: '';
     display: block;
     width: 100%;
-    height: 5rem;
+    height: 7rem;
   }
 
   .color-box {

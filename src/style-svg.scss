@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import "./global.scss";
 
 :global(.container-icon svg) {
   @extend %svg-default;
@@ -9,6 +9,7 @@
   stroke-width:1;
 }
 
-:global(.container-icon .icon.close svg path)  {
-  fill: $color-icon;
+:global(.container-icon .icon svg) {
+  z-index: 200;
 }
+
