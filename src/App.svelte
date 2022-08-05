@@ -21,6 +21,7 @@
   
 </script>
 
+
 <main class="sheet">
   <div class="container-icon">
 
@@ -61,6 +62,27 @@
 </main>
 
 <style lang="scss">
+  .teste {
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    background-color:cadetblue;
+
+    z-index: 99999;
+
+  }
+
   @import "./style.scss";
   @import "./style-svg.scss"
+
+  
 </style>

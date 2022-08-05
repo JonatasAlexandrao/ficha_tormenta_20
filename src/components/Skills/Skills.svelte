@@ -3,10 +3,6 @@
   import { VAR_skills } from '../../store'
   import SkillLine from '../../elements/SkillLine/SkillLine.svelte';
 
-  function teste() {
-   // console.log({$VAR_skills})
-  }
-
 </script>
 
 <div class="container_skills">
@@ -21,13 +17,12 @@
         <th>Outros</th>
       </tr>
     </thead>
-    <tbody on:click={teste}>
+    <tbody>
 
       {#each $VAR_skills as {text, attribute, className}, index}
         <SkillLine text={text} attributeDefault={attribute} className={className} num={index} />
       {/each}
-
-
+      
     </tbody>
       
   </table>

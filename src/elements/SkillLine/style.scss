@@ -1,6 +1,70 @@
 @import "../../global.scss";
+@import "../../components/Skills/style.scss";
+
+
 
 .skill_line {
+
+
+
+  .skill_line_name { 
+    .check_box { 
+      opacity: .8;
+      cursor: pointer;
+    }
+    .check_label.-only_trained { 
+      color: $color-alert;
+    }
+   }
+
+   .skill_line_modifier {
+      position: relative;
+      &::after {
+        content: '+';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+        font-size: 1.8rem;
+      }
+      &::before {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(100%);
+        font-size: 1.8rem;
+      }
+    }
+
+    .skill_line_others {
+      position: relative;
+  
+      &::after {
+        content: '+';
+        position: absolute;
+        left: -.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+      }
+  
+      input {
+        width: 80%;
+      }
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+/*.skill_line {
   height: 3.1rem;
   font-size: 1.3rem; 
 
@@ -79,4 +143,4 @@
       width: 80%;
     }
   }
-}
+}*/
