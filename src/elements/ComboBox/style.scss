@@ -17,6 +17,8 @@
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.2);
 
+    &:focus { outline: 2px solid $color-input-selected; }
+
     &.-modifier {
       font-size: 1rem;
       & ~ .listBox li {

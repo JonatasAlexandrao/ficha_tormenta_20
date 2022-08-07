@@ -13,13 +13,9 @@
 <style lang="scss">
 
   .equipment_line {
-    width: 100%;
-    height: 2.3rem;
-    
     display: grid;
     grid-template-columns: 80% 17%;
-    gap: 3%;
-    margin-bottom: .5rem;    
+    column-gap: 3%;
   }
 
 </style>

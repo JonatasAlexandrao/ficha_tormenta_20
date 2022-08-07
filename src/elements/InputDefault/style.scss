@@ -19,6 +19,8 @@
   background-color: $color-input;
   color: inherit;
 
+  &:focus { outline: 2px solid $color-input-selected; }
+
   &.-character {
     height: 3.2rem;
     font-size: 2.5vw;
@@ -86,12 +88,20 @@
     font-size: 1.6rem;
     border-bottom: 2px solid #000;
 
+    &:focus {
+      border-bottom: 2px solid $color-input-selected;
+    }
+
     &.s-1 { font-size: 1.55rem; }
     &.s-2 { font-size: 1.5rem; }
     &.s-3 { font-size: 1.45rem; }
     &.s-4 { font-size: 1.4rem; }
     &.s-5 { font-size: 1.35rem; }
     &.small { font-size: 1.2rem; }
+  }
+
+  &.-weight:focus {
+    border-bottom: 2px solid $color-input-selected;
   }
 
   &.-total_tibar, &.-total_tibarO {

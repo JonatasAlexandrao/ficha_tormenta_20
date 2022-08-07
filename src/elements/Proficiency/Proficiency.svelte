@@ -32,6 +32,8 @@
       font-size: 1.2rem;
 
       background-color: $color-input; 
+
+      &:focus { outline: 2px solid $color-input-selected; }
     }
   }
 

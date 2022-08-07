@@ -9,7 +9,6 @@ ul { padding: 0; margin: 0}
 button { border-style: none; cursor: pointer; }
 button:focus { border-color: rgb(107, 107, 107); }
 input, textarea { border-style: none; }
-input:focus { outline: 2px solid var(--color-input-selected); }
 input, button, select, textarea { font-family: inherit; font-size: inherit; }
 
 /*=======================================*/
