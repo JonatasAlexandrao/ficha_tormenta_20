@@ -1,58 +1,67 @@
 @import "../../global.scss";
 @import "../../components/Skills/style.scss";
 
+%symbol {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(100%);
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
 
 
 .skill_line {
+  @extend %table-columns;
+  font-size: 1.8rem;
+  //border-bottom: solid #000 1px;
 
-
+  td {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, .3);
+  }
 
   .skill_line_name { 
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: left;
+    font-size: 1.4rem;
+
     .check_box { 
       opacity: .8;
       cursor: pointer;
+      margin: 0 .5rem 0 0;
     }
     .check_label.-only_trained { 
       color: $color-alert;
     }
    }
 
-   .skill_line_modifier {
-      position: relative;
-      &::after {
-        content: '+';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) translateX(-100%);
-        font-size: 1.8rem;
-      }
-      &::before {
-        content: '+';
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%) translateX(100%);
-        font-size: 1.8rem;
-      }
+  .skill_line_total {
+    position: relative;
+    &::after {
+      content: '=';
+      @extend %symbol;
     }
+  }
 
-    .skill_line_others {
-      position: relative;
-  
-      &::after {
-        content: '+';
-        position: absolute;
-        left: -.8rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.8rem;
-      }
-  
-      input {
-        width: 80%;
-      }
+  .skill_line_half_level,
+  .skill_line_modifier,
+  .skill_line_training {
+    position: relative;
+    &::after {
+      content: '+';
+      @extend %symbol;
     }
+  }
+
+  
+  .skill_line_total {
+    border-bottom: none;
+  }
   
 }
 

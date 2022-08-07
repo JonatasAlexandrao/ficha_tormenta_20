@@ -55,7 +55,7 @@
   </td>
   <td class="skill_line_training"> {trained} </td>
   <td class="skill_line_others"> 
-    <InputDefault className="skill_outher -{className}" nameInput="skill_outher_{num}" bind:value={others} maxlength="3" />
+    <InputDefault className="skill_other -{className}" nameInput="skill_other_{num}" bind:value={others} maxlength="3" />
   </td>
 </tr>
 

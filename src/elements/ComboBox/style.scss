@@ -7,6 +7,7 @@
 
   display: grid;
   align-items: center;
+  justify-items: center;
 
   .combo_box {
     width: 100%;
@@ -15,6 +16,23 @@
     text-align: center;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.2);
+
+    &.-modifier {
+      font-size: 1rem;
+      & ~ .listBox li {
+        font-size: 1rem;
+      }
+    }
+    
+  
+    &.-size {
+      font-size: 1.2rem;
+      width: 90%;
+    }
+
+    &.-skill_modifier {
+      width: 90%;
+    }
 
   }
 
@@ -80,18 +98,7 @@
       }
     }
   }
-  .combo_box.-modifier {
-    font-size: 1rem;
-    & ~ .listBox li {
-      font-size: 1rem;
-    }
-  }
   
-
-  .combo_box.-size {
-    font-size: 1.2rem;
-    width: 90%;
-  }
 
 }
 
