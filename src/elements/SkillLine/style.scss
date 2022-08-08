@@ -14,8 +14,7 @@
 
 .skill_line {
   @extend %table-columns;
-  font-size: 1.8rem;
-  //border-bottom: solid #000 1px;
+  font-size: 1.7rem;
 
   td {
     display: inherit;
@@ -64,92 +63,3 @@
   }
   
 }
-
-
-
-
-
-
-
-
-
-/*.skill_line {
-  height: 3.1rem;
-  font-size: 1.3rem; 
-
-  td:first-child {
-    display: flex;
-    align-items: center;
-  }
-
-  td {
-    height: 100%;
-    text-align: center;
-    border-bottom: rgba(0, 0, 0, .2) 1px solid;
-  }
-
-  .skill_line_name { 
-    .check_box { 
-      opacity: .8;
-      cursor: pointer;
-    }
-    .check_label.-only_trained { 
-      color: $color-alert;
-    }
-   }
-
-  .skill_line_total {
-    position: relative;
-    font-size: 1.6rem;
-  }
-
-  .skill_line_half_level {
-    position: relative;
-    &::after {
-      content: '=';
-      position: absolute;
-      left: -.2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.8rem;
-    }
-  }
-
-  .skill_line_modifier {
-    position: relative;
-    &::after {
-      content: '+';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%) translateX(-100%);
-      font-size: 1.8rem;
-    }
-    &::before {
-      content: '+';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%) translateX(100%);
-      font-size: 1.8rem;
-    }
-
-  }
-
-  .skill_line_others {
-    position: relative;
-
-    &::after {
-      content: '+';
-      position: absolute;
-      left: -.8rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.8rem;
-    }
-
-    input {
-      width: 80%;
-    }
-  }
-}*/

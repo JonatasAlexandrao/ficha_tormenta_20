@@ -3,7 +3,7 @@
 
 %table-columns {
   display: grid;
-  grid-template-columns: 35.5% 11% 10% 13% 9% 9%;
+  grid-template-columns: 38.5% 10% 9% 12% 9% 9%;
   grid-column-gap: 2.5%;
 }
 
@@ -45,7 +45,10 @@
     justify-content: center;
 
 
-    thead { margin-bottom: .5rem; }
+    thead { 
+      margin-bottom: .5rem;
+      font-size: .9rem;
+    }
     thead, tbody { 
       display: inherit;
       grid-auto-rows: 3.1rem; 
@@ -62,7 +65,7 @@
         padding-left: 1rem;
       }
       th:nth-child(2) {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         text-transform: uppercase;
       }
     }
@@ -70,15 +73,18 @@
   }
 
   .table_footer {
-    width: 100%;
+    width: 75%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 2rem;
 
     position: absolute;
-    bottom: 0%;
+    bottom: -1%;
+    left: 50%;
+    transform: translateX(-50%);
 
-    font-size: 1rem;
+    font-size: 13px;
     z-index: 1;
 
     p {
@@ -91,84 +97,3 @@
   }
 
 }
-
-/*
-@import "../../global.scss";
-
-.container_skills {
-  width: 100%;
-  height: auto;
-  position: relative;
-
-  margin-top: 5.5rem;
-  z-index: 1;
-  
-  border-left: $color-stroke 3px solid;
-  border-right: $color-stroke 3px solid;
-  background-color: $color-fill;
-
-  &::before {
-    content: '';
-    width: 100%;
-    height: 1rem;
-    position: relative;
-    display: block;
-    background-color: $color-fill;
-  }
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 1rem;
-    position: relative;
-    display: block;
-    background-color: $color-fill;
-  }
-
-  .table_skills {
-    width: 96%;
-    position: relative;
-
-    margin: -4.5rem 2% 2rem 2%;
-    border-collapse: collapse;
-
-    tr { height: 3rem; }
-    th { 
-      max-width: 12%; 
-      min-width: 12%;
-      font-size: 1.1rem;
-      vertical-align: bottom;
-    }
-
-    th:first-child {
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      width: 35%;
-      min-width: 30%;
-    }
-
-  }
-
-  .table_footer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 2rem;
-
-    position: absolute;
-    bottom: 0%;
-
-    font-size: 1rem;
-    z-index: 1;
-
-    p {
-      width: 100%;
-
-      &:first-child {
-        text-align: right;
-      }
-    }
-  }
-
-}
-*/

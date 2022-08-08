@@ -27,8 +27,8 @@
       
   </table>
   <div class="table_footer">
-    <p>¹ Penalidade de Aramadura.</p>
-    <p>² Somente treinado.</p>
+    <p>¤ Penalidade de Aramadura.</p>
+    <p>⌂ Somente treinado.</p>
   </div>
 
   <img src="../img/Pericias/skills_top.svg" alt="" use:fetchSvg>
