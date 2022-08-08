@@ -30,12 +30,26 @@
   let havePenalty = $VAR_skills[num].armorPenalty
   $: armorPenaltyValue = havePenalty ? $VAR_armorPenalty : 0
 
-  //let onlyTrained = ($VAR_skills[num].onlyTrained & checkBox) ? '-only_trained' : ''
+ 
   let onlyTrained = $VAR_skills[num].onlyTrained
   $: notTrained = onlyTrained & !checkBox ? '-only_trained' : ''
   
   /* ====== TOTAL ====== */
   $: $VAR_skills[num].total = (attributeValue + trained + halfLevel + parseInt(others)) + armorPenaltyValue
+
+  /* ==== Teste Penalty or Training ==== */
+  let title
+
+  let isArmorPenalty = text.indexOf('¤') > -1 ? true : false
+  let isTrained = text.indexOf('⌂') > -1 ? true : false
+
+  if (isArmorPenalty && isTrained) {
+    title = `Penalidade de Armadura \nSomente Treinado` 
+  } else if (isArmorPenalty) { 
+    title = 'Penalidade de Armadura'
+  } else if (isTrained) {
+    title = 'Somente Treinado'
+  }
 
 
 </script>
@@ -43,7 +57,7 @@
 <tr class="skill_line {className}" >
   <td class="skill_line_name"> 
     <input class="check_box {className}" id="check_box_{num}" type="checkbox" bind:checked={checkBox}> 
-    <label class="check_label {notTrained}" for="check_box_{num}">{text}</label>  
+    <label class="check_label {notTrained}" for="check_box_{num}" title={title}>{text}</label>  
   </td>
   <td class="skill_line_total">
      {$VAR_skills[num].total} 
