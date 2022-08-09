@@ -1,12 +1,5 @@
 @import "../../global.scss";
 
-
-%table-columns {
-  display: grid;
-  grid-template-columns: 38.5% 10% 9% 12% 9% 9%;
-  grid-column-gap: 2.5%;
-}
-
 .container_skills {
   width: 100%;
   height: auto;

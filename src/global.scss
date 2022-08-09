@@ -5,7 +5,6 @@ $color-font: var(--color-font);
 
 $color-background: var(--color-background);
 $color-fill: var(--color-fill);
-//$color-fill-dark: var(--color-fill-dark);
 $color-stroke: var(--color-stroke);
 $color-input: var(--color-input);
 $color-alert: var(--color-alert);
@@ -25,20 +24,13 @@ $color-icon: var(--color-icon);
   z-index: -1;
 }
 
-
-// ====== Global ======
-:global(.txt_label) {
-  text-align: center;
+%table-columns {
+  display: grid;
+  grid-template-columns: 38.5% 10% 9% 12% 9% 9%;
+  grid-column-gap: 2.5%;
 }
 
-:global(body) {
-  font-family: Quattrocento Sans, sans-serif;
-  background-color: $color-background;
-  color: $color-font;
 
-  display: flex;
-  justify-content: center;
 
-}
 
 

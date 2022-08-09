@@ -1,4 +1,4 @@
-/*==================== Global =========================*/
+/*================ Default ======================*/
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; }
@@ -21,7 +21,8 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 :root { 
-  font-size: 10px; 
+  font-size: 10px;
+  font-family: Quattrocento Sans, sans-serif;
 
   /* ======== Variaveis Default ======== */
   --color-font-default: rgb(23, 23, 23);
@@ -59,7 +60,17 @@ input, button, select, textarea { font-family: inherit; font-size: inherit; }
 
   --color-icon: var(--color-icon-light);
 
+}
 
+/*================= Global ====================*/
+body {
+  background-color: var(--color-background);
+  color: var(--color-font);
+
+  display: flex;
+  justify-content: center;
 
 }
+
+label { text-align: center; }
 
